@@ -1,0 +1,2995 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.38 build -256452561 
+                                                                                               Sun Apr 30 11:45:29 2017
+
+Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
+     1                           	processor	16F877A
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataBANK0,global,class=CODE,delta=2
+     5                           	psect	stringtext,global,reloc=256,class=STRCODE,delta=2
+     6                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     7                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+     9                           	psect	inittext,global,class=CODE,delta=2
+    10                           	psect	clrtext,global,class=CODE,delta=2
+    11                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    12                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    13                           	psect	maintext,global,class=CODE,split=1,delta=2
+    14                           	psect	text1,local,class=CODE,merge=1,delta=2
+    15                           	psect	text2,local,class=CODE,merge=1,delta=2
+    16                           	psect	text3,local,class=CODE,merge=1,delta=2
+    17                           	psect	text4,local,class=CODE,merge=1,inline,delta=2
+    18                           	psect	text5,local,class=CODE,merge=1,delta=2
+    19                           	psect	text6,local,class=CODE,merge=1,delta=2
+    20                           	psect	text7,local,class=CODE,merge=1,delta=2
+    21                           	psect	text8,local,class=CODE,merge=1,delta=2
+    22                           	psect	text9,local,class=CODE,merge=1,delta=2
+    23                           	psect	text10,local,class=CODE,merge=1,delta=2
+    24                           	psect	text11,local,class=CODE,merge=1,delta=2
+    25                           	psect	text12,local,class=CODE,merge=1,delta=2
+    26                           	psect	text13,local,class=CODE,merge=1,delta=2
+    27                           	psect	text14,local,class=CODE,merge=1,delta=2
+    28                           	psect	text15,local,class=CODE,merge=1,delta=2
+    29                           	dabs	1,0x7E,2
+    30  0000                     	;# 
+    31  0001                     	;# 
+    32  0002                     	;# 
+    33  0003                     	;# 
+    34  0004                     	;# 
+    35  0005                     	;# 
+    36  0006                     	;# 
+    37  0007                     	;# 
+    38  0008                     	;# 
+    39  0009                     	;# 
+    40  000A                     	;# 
+    41  000B                     	;# 
+    42  000C                     	;# 
+    43  000D                     	;# 
+    44  000E                     	;# 
+    45  000E                     	;# 
+    46  000F                     	;# 
+    47  0010                     	;# 
+    48  0011                     	;# 
+    49  0012                     	;# 
+    50  0013                     	;# 
+    51  0014                     	;# 
+    52  0015                     	;# 
+    53  0015                     	;# 
+    54  0016                     	;# 
+    55  0017                     	;# 
+    56  0018                     	;# 
+    57  0019                     	;# 
+    58  001A                     	;# 
+    59  001B                     	;# 
+    60  001B                     	;# 
+    61  001C                     	;# 
+    62  001D                     	;# 
+    63  001E                     	;# 
+    64  001F                     	;# 
+    65  0081                     	;# 
+    66  0085                     	;# 
+    67  0086                     	;# 
+    68  0087                     	;# 
+    69  0088                     	;# 
+    70  0089                     	;# 
+    71  008C                     	;# 
+    72  008D                     	;# 
+    73  008E                     	;# 
+    74  0091                     	;# 
+    75  0092                     	;# 
+    76  0093                     	;# 
+    77  0094                     	;# 
+    78  0098                     	;# 
+    79  0099                     	;# 
+    80  009C                     	;# 
+    81  009D                     	;# 
+    82  009E                     	;# 
+    83  009F                     	;# 
+    84  010C                     	;# 
+    85  010D                     	;# 
+    86  010E                     	;# 
+    87  010F                     	;# 
+    88  018C                     	;# 
+    89  018D                     	;# 
+    90                           
+    91                           	psect	idataBANK0
+    92  0419                     __pidataBANK0:	
+    93                           
+    94                           ;initializer for __esp8266_waitResponse@F1360
+    95  0419  345B               	retlw	low (STR_11| (0+32768))
+    96  041A  3489               	retlw	high (STR_11| (0+32768))
+    97  041B  3426               	retlw	low (STR_35| (0+32768))
+    98  041C  3489               	retlw	high (STR_35| (0+32768))
+    99  041D  343B               	retlw	low (STR_36| (0+32768))
+   100  041E  3489               	retlw	high (STR_36| (0+32768))
+   101  041F  34F7               	retlw	low (STR_37| (0+32768))
+   102  0420  3488               	retlw	high (STR_37| (0+32768))
+   103  0421  3412               	retlw	low (STR_38| (0+32768))
+   104  0422  3489               	retlw	high (STR_38| (0+32768))
+   105  0423  3419               	retlw	low (STR_39| (0+32768))
+   106  0424  3489               	retlw	high (STR_39| (0+32768))
+   107                           
+   108                           	psect	stringtext
+   109  0800                     __pstringtext:	
+   110  0800                     stringtab:	
+   111  0800                     __stringtab:	
+   112                           
+   113                           ;	String table - string pointers are 2 bytes each
+   114  0800  1BFF               	btfsc	btemp+1,7
+   115  0801  280A               	ljmp	stringcode
+   116  0802  1383               	bcf	3,7
+   117  0803  187F               	btfsc	btemp+1,0
+   118  0804  1783               	bsf	3,7
+   119  0805  0800               	movf	0,w
+   120  0806  0A84               	incf	4,f
+   121  0807  1903               	skipnz
+   122  0808  0AFF               	incf	btemp+1,f
+   123  0809  0008               	return
+   124  080A                     stringcode:	
+   125  080A  087F               	movf	btemp+1,w
+   126  080B  397F               	andlw	127
+   127  080C  008A               	movwf	10
+   128  080D  0804               	movf	4,w
+   129  080E  0A84               	incf	4,f
+   130  080F  1903               	skipnz
+   131  0810  0AFF               	incf	btemp+1,f
+   132  0811  0082               	movwf	2
+   133  0812                     __stringbase:	
+   134  0812                     __end_of__stringtab:	
+   135  0812                     _dpowers:	
+   136  0812  3401               	retlw	1
+   137  0813  3400               	retlw	0
+   138  0814  340A               	retlw	10
+   139  0815  3400               	retlw	0
+   140  0816  3464               	retlw	100
+   141  0817  3400               	retlw	0
+   142  0818  34E8               	retlw	232
+   143  0819  3403               	retlw	3
+   144  081A  3410               	retlw	16
+   145  081B  3427               	retlw	39
+   146  081C                     __end_of_dpowers:	
+   147  081C                     __esp8266_waitResponse@lengths:	
+   148  081C  3402               	retlw	2
+   149  081D  3405               	retlw	5
+   150  081E  3404               	retlw	4
+   151  081F  3409               	retlw	9
+   152  0820  3406               	retlw	6
+   153  0821  3406               	retlw	6
+   154  0822                     __end_of__esp8266_waitResponse@lengths:	
+   155  0822                     __esp8266_waitResponse@responses:	
+   156  0822  3401               	retlw	1
+   157  0823  3402               	retlw	2
+   158  0824  3403               	retlw	3
+   159  0825  3404               	retlw	4
+   160  0826  3405               	retlw	5
+   161  0827  3406               	retlw	6
+   162  0828                     __end_of__esp8266_waitResponse@responses:	
+   163  001A                     _RCREG	set	26
+   164  0019                     _TXREG	set	25
+   165  00C4                     _CREN	set	196
+   166  00C1                     _OERR	set	193
+   167  0065                     _RCIF	set	101
+   168  0042                     _RD2	set	66
+   169  0043                     _RD3	set	67
+   170  0044                     _RD4	set	68
+   171  0045                     _RD5	set	69
+   172  0046                     _RD6	set	70
+   173  0047                     _RD7	set	71
+   174  00C6                     _RX9	set	198
+   175  00C7                     _SPEN	set	199
+   176  0064                     _TXIF	set	100
+   177  0099                     _SPBRG	set	153
+   178  0088                     _TRISD	set	136
+   179  04C2                     _BRGH	set	1218
+   180  04C4                     _SYNC	set	1220
+   181  043E                     _TRISC6	set	1086
+   182  043F                     _TRISC7	set	1087
+   183  04C6                     _TX9	set	1222
+   184  04C5                     _TXEN	set	1221
+   185  0828                     STR_41:	
+   186  0828  3445               	retlw	69	;'E'
+   187  0829  3453               	retlw	83	;'S'
+   188  082A  3450               	retlw	80	;'P'
+   189  082B  3435               	retlw	53	;'5'
+   190  082C  3432               	retlw	50	;'2'
+   191  082D  3436               	retlw	54	;'6'
+   192  082E  3436               	retlw	54	;'6'
+   193  082F  3420               	retlw	32	;' '
+   194  0830  3477               	retlw	119	;'w'
+   195  0831  3469               	retlw	105	;'i'
+   196  0832  3474               	retlw	116	;'t'
+   197  0833  3468               	retlw	104	;'h'
+   198  0834  3420               	retlw	32	;' '
+   199  0835  3450               	retlw	80	;'P'
+   200  0836  3449               	retlw	73	;'I'
+   201  0837  3443               	retlw	67	;'C'
+   202  0838  3400               	retlw	0
+   203  0839                     STR_43:	
+   204  0839  3445               	retlw	69	;'E'
+   205  083A  3453               	retlw	83	;'S'
+   206  083B  3450               	retlw	80	;'P'
+   207  083C  3420               	retlw	32	;' '
+   208  083D  3469               	retlw	105	;'i'
+   209  083E  3473               	retlw	115	;'s'
+   210  083F  3420               	retlw	32	;' '
+   211  0840  3463               	retlw	99	;'c'
+   212  0841  346F               	retlw	111	;'o'
+   213  0842  346E               	retlw	110	;'n'
+   214  0843  346E               	retlw	110	;'n'
+   215  0844  3465               	retlw	101	;'e'
+   216  0845  3463               	retlw	99	;'c'
+   217  0846  3474               	retlw	116	;'t'
+   218  0847  3465               	retlw	101	;'e'
+   219  0848  3464               	retlw	100	;'d'
+   220  0849  3400               	retlw	0
+   221  084A                     STR_40:	
+   222  084A  3443               	retlw	67	;'C'
+   223  084B  3469               	retlw	105	;'i'
+   224  084C  3472               	retlw	114	;'r'
+   225  084D  3463               	retlw	99	;'c'
+   226  084E  3475               	retlw	117	;'u'
+   227  084F  3469               	retlw	105	;'i'
+   228  0850  3474               	retlw	116	;'t'
+   229  0851  3420               	retlw	32	;' '
+   230  0852  3444               	retlw	68	;'D'
+   231  0853  3469               	retlw	105	;'i'
+   232  0854  3467               	retlw	103	;'g'
+   233  0855  3465               	retlw	101	;'e'
+   234  0856  3473               	retlw	115	;'s'
+   235  0857  3474               	retlw	116	;'t'
+   236  0858  3400               	retlw	0
+   237  0859                     STR_21:	
+   238  0859  3441               	retlw	65	;'A'
+   239  085A  3454               	retlw	84	;'T'
+   240  085B  342B               	retlw	43	;'+'
+   241  085C  3443               	retlw	67	;'C'
+   242  085D  3449               	retlw	73	;'I'
+   243  085E  3450               	retlw	80	;'P'
+   244  085F  3453               	retlw	83	;'S'
+   245  0860  3454               	retlw	84	;'T'
+   246  0861  3441               	retlw	65	;'A'
+   247  0862  3452               	retlw	82	;'R'
+   248  0863  3454               	retlw	84	;'T'
+   249  0864  343D               	retlw	61	;'='
+   250  0865  3422               	retlw	34	;'"'
+   251  0866  3400               	retlw	0
+   252  0867                     STR_44:	
+   253  0867  3445               	retlw	69	;'E'
+   254  0868  3453               	retlw	83	;'S'
+   255  0869  3450               	retlw	80	;'P'
+   256  086A  3420               	retlw	32	;' '
+   257  086B  3473               	retlw	115	;'s'
+   258  086C  3465               	retlw	101	;'e'
+   259  086D  3474               	retlw	116	;'t'
+   260  086E  3420               	retlw	32	;' '
+   261  086F  3461               	retlw	97	;'a'
+   262  0870  3473               	retlw	115	;'s'
+   263  0871  3420               	retlw	32	;' '
+   264  0872  3441               	retlw	65	;'A'
+   265  0873  3450               	retlw	80	;'P'
+   266  0874  3400               	retlw	0
+   267  0875                     STR_47:	
+   268  0875  3441               	retlw	65	;'A'
+   269  0876  3450               	retlw	80	;'P'
+   270  0877  3420               	retlw	32	;' '
+   271  0878  3463               	retlw	99	;'c'
+   272  0879  346F               	retlw	111	;'o'
+   273  087A  346E               	retlw	110	;'n'
+   274  087B  3466               	retlw	102	;'f'
+   275  087C  3469               	retlw	105	;'i'
+   276  087D  3467               	retlw	103	;'g'
+   277  087E  3475               	retlw	117	;'u'
+   278  087F  3472               	retlw	114	;'r'
+   279  0880  3465               	retlw	101	;'e'
+   280  0881  3464               	retlw	100	;'d'
+   281  0882  3400               	retlw	0
+   282  0883                     STR_42:	
+   283  0883  3445               	retlw	69	;'E'
+   284  0884  3453               	retlw	83	;'S'
+   285  0885  3450               	retlw	80	;'P'
+   286  0886  3420               	retlw	32	;' '
+   287  0887  346E               	retlw	110	;'n'
+   288  0888  346F               	retlw	111	;'o'
+   289  0889  3474               	retlw	116	;'t'
+   290  088A  3420               	retlw	32	;' '
+   291  088B  3466               	retlw	102	;'f'
+   292  088C  346F               	retlw	111	;'o'
+   293  088D  3475               	retlw	117	;'u'
+   294  088E  346E               	retlw	110	;'n'
+   295  088F  3464               	retlw	100	;'d'
+   296  0890  3400               	retlw	0
+   297  0891                     STR_45:	
+   298  0891  3443               	retlw	67	;'C'
+   299  0892  3469               	retlw	105	;'i'
+   300  0893  3472               	retlw	114	;'r'
+   301  0894  3463               	retlw	99	;'c'
+   302  0895  3475               	retlw	117	;'u'
+   303  0896  3469               	retlw	105	;'i'
+   304  0897  3474               	retlw	116	;'t'
+   305  0898  3444               	retlw	68	;'D'
+   306  0899  3469               	retlw	105	;'i'
+   307  089A  3467               	retlw	103	;'g'
+   308  089B  3465               	retlw	101	;'e'
+   309  089C  3473               	retlw	115	;'s'
+   310  089D  3474               	retlw	116	;'t'
+   311  089E  3400               	retlw	0
+   312  089F                     STR_29:	
+   313  089F  3441               	retlw	65	;'A'
+   314  08A0  3454               	retlw	84	;'T'
+   315  08A1  342B               	retlw	43	;'+'
+   316  08A2  3443               	retlw	67	;'C'
+   317  08A3  3449               	retlw	73	;'I'
+   318  08A4  3450               	retlw	80	;'P'
+   319  08A5  3453               	retlw	83	;'S'
+   320  08A6  3445               	retlw	69	;'E'
+   321  08A7  344E               	retlw	78	;'N'
+   322  08A8  3444               	retlw	68	;'D'
+   323  08A9  343D               	retlw	61	;'='
+   324  08AA  3400               	retlw	0
+   325  08AB                     STR_4:	
+   326  08AB  3441               	retlw	65	;'A'
+   327  08AC  3454               	retlw	84	;'T'
+   328  08AD  342B               	retlw	43	;'+'
+   329  08AE  3443               	retlw	67	;'C'
+   330  08AF  3457               	retlw	87	;'W'
+   331  08B0  344C               	retlw	76	;'L'
+   332  08B1  3449               	retlw	73	;'I'
+   333  08B2  3446               	retlw	70	;'F'
+   334  08B3  340D               	retlw	13
+   335  08B4  340A               	retlw	10
+   336  08B5  3400               	retlw	0
+   337  08B6                     STR_17:	
+   338  08B6  3441               	retlw	65	;'A'
+   339  08B7  3454               	retlw	84	;'T'
+   340  08B8  342B               	retlw	43	;'+'
+   341  08B9  3443               	retlw	67	;'C'
+   342  08BA  3457               	retlw	87	;'W'
+   343  08BB  3451               	retlw	81	;'Q'
+   344  08BC  3441               	retlw	65	;'A'
+   345  08BD  3450               	retlw	80	;'P'
+   346  08BE  340D               	retlw	13
+   347  08BF  340A               	retlw	10
+   348  08C0  3400               	retlw	0
+   349  08C1                     STR_19:	
+   350  08C1  3441               	retlw	65	;'A'
+   351  08C2  3454               	retlw	84	;'T'
+   352  08C3  342B               	retlw	43	;'+'
+   353  08C4  3443               	retlw	67	;'C'
+   354  08C5  3449               	retlw	73	;'I'
+   355  08C6  3446               	retlw	70	;'F'
+   356  08C7  3453               	retlw	83	;'S'
+   357  08C8  3452               	retlw	82	;'R'
+   358  08C9  340D               	retlw	13
+   359  08CA  340A               	retlw	10
+   360  08CB  3400               	retlw	0
+   361  08CC                     STR_14:	
+   362  08CC  3441               	retlw	65	;'A'
+   363  08CD  3454               	retlw	84	;'T'
+   364  08CE  342B               	retlw	43	;'+'
+   365  08CF  3443               	retlw	67	;'C'
+   366  08D0  3457               	retlw	87	;'W'
+   367  08D1  344A               	retlw	74	;'J'
+   368  08D2  3441               	retlw	65	;'A'
+   369  08D3  3450               	retlw	80	;'P'
+   370  08D4  343D               	retlw	61	;'='
+   371  08D5  3422               	retlw	34	;'"'
+   372  08D6  3400               	retlw	0
+   373  08D7                     STR_1:	
+   374  08D7  3441               	retlw	65	;'A'
+   375  08D8  3454               	retlw	84	;'T'
+   376  08D9  342B               	retlw	43	;'+'
+   377  08DA  3443               	retlw	67	;'C'
+   378  08DB  3457               	retlw	87	;'W'
+   379  08DC  3453               	retlw	83	;'S'
+   380  08DD  3441               	retlw	65	;'A'
+   381  08DE  3450               	retlw	80	;'P'
+   382  08DF  343D               	retlw	61	;'='
+   383  08E0  3422               	retlw	34	;'"'
+   384  08E1  3400               	retlw	0
+   385  08E2                     STR_12:	
+   386  08E2  3441               	retlw	65	;'A'
+   387  08E3  3454               	retlw	84	;'T'
+   388  08E4  342B               	retlw	43	;'+'
+   389  08E5  3443               	retlw	67	;'C'
+   390  08E6  3457               	retlw	87	;'W'
+   391  08E7  344D               	retlw	77	;'M'
+   392  08E8  344F               	retlw	79	;'O'
+   393  08E9  3444               	retlw	68	;'D'
+   394  08EA  3445               	retlw	69	;'E'
+   395  08EB  343D               	retlw	61	;'='
+   396  08EC  3400               	retlw	0
+   397  08ED                     STR_46:	
+   398  08ED  3436               	retlw	54	;'6'
+   399  08EE  3431               	retlw	49	;'1'
+   400  08EF  3439               	retlw	57	;'9'
+   401  08F0  3430               	retlw	48	;'0'
+   402  08F1  3430               	retlw	48	;'0'
+   403  08F2  3437               	retlw	55	;'7'
+   404  08F3  3431               	retlw	49	;'1'
+   405  08F4  3432               	retlw	50	;'2'
+   406  08F5  3433               	retlw	51	;'3'
+   407  08F6  3400               	retlw	0
+   408  08F7                     STR_37:	
+   409  08F7  346E               	retlw	110	;'n'
+   410  08F8  346F               	retlw	111	;'o'
+   411  08F9  3420               	retlw	32	;' '
+   412  08FA  3463               	retlw	99	;'c'
+   413  08FB  3468               	retlw	104	;'h'
+   414  08FC  3461               	retlw	97	;'a'
+   415  08FD  346E               	retlw	110	;'n'
+   416  08FE  3467               	retlw	103	;'g'
+   417  08FF  3465               	retlw	101	;'e'
+   418  0900  3400               	retlw	0
+   419  0901                     STR_8:	
+   420  0901  3441               	retlw	65	;'A'
+   421  0902  3454               	retlw	84	;'T'
+   422  0903  342B               	retlw	43	;'+'
+   423  0904  3452               	retlw	82	;'R'
+   424  0905  3453               	retlw	83	;'S'
+   425  0906  3454               	retlw	84	;'T'
+   426  0907  340D               	retlw	13
+   427  0908  340A               	retlw	10
+   428  0909  3400               	retlw	0
+   429  090A                     STR_3:	
+   430  090A  3422               	retlw	34	;'"'
+   431  090B  342C               	retlw	44	;','
+   432  090C  3435               	retlw	53	;'5'
+   433  090D  342C               	retlw	44	;','
+   434  090E  3433               	retlw	51	;'3'
+   435  090F  340D               	retlw	13
+   436  0910  340A               	retlw	10
+   437  0911  3400               	retlw	0
+   438  0912                     STR_38:	
+   439  0912  344C               	retlw	76	;'L'
+   440  0913  3469               	retlw	105	;'i'
+   441  0914  346E               	retlw	110	;'n'
+   442  0915  346B               	retlw	107	;'k'
+   443  0916  3465               	retlw	101	;'e'
+   444  0917  3464               	retlw	100	;'d'
+   445  0918  3400               	retlw	0
+   446  0919                     STR_39:	
+   447  0919  3455               	retlw	85	;'U'
+   448  091A  346E               	retlw	110	;'n'
+   449  091B  346C               	retlw	108	;'l'
+   450  091C  3469               	retlw	105	;'i'
+   451  091D  346E               	retlw	110	;'n'
+   452  091E  346B               	retlw	107	;'k'
+   453  091F  3400               	retlw	0
+   454  0920                     STR_31:	
+   455  0920  342B               	retlw	43	;'+'
+   456  0921  3449               	retlw	73	;'I'
+   457  0922  3450               	retlw	80	;'P'
+   458  0923  3444               	retlw	68	;'D'
+   459  0924  342C               	retlw	44	;','
+   460  0925  3400               	retlw	0
+   461  0926                     STR_35:	
+   462  0926  3472               	retlw	114	;'r'
+   463  0927  3465               	retlw	101	;'e'
+   464  0928  3461               	retlw	97	;'a'
+   465  0929  3464               	retlw	100	;'d'
+   466  092A  3479               	retlw	121	;'y'
+   467  092B  3400               	retlw	0
+   468  092C                     STR_32:	
+   469  092C  340D               	retlw	13
+   470  092D  340A               	retlw	10
+   471  092E  340D               	retlw	13
+   472  092F  340A               	retlw	10
+   473  0930  3400               	retlw	0
+   474  0931                     STR_7:	
+   475  0931  3441               	retlw	65	;'A'
+   476  0932  3454               	retlw	84	;'T'
+   477  0933  340D               	retlw	13
+   478  0934  340A               	retlw	10
+   479  0935  3400               	retlw	0
+   480  0936                     STR_6:	
+   481  0936  344D               	retlw	77	;'M'
+   482  0937  3441               	retlw	65	;'A'
+   483  0938  3443               	retlw	67	;'C'
+   484  0939  343A               	retlw	58	;':'
+   485  093A  3400               	retlw	0
+   486  093B                     STR_36:	
+   487  093B  3446               	retlw	70	;'F'
+   488  093C  3441               	retlw	65	;'A'
+   489  093D  3449               	retlw	73	;'I'
+   490  093E  344C               	retlw	76	;'L'
+   491  093F  3400               	retlw	0
+   492  0940                     STR_16:	
+   493  0940  3422               	retlw	34	;'"'
+   494  0941  340D               	retlw	13
+   495  0942  340A               	retlw	10
+   496  0943  3400               	retlw	0
+   497  0944                     STR_2:	
+   498  0944  3422               	retlw	34	;'"'
+   499  0945  342C               	retlw	44	;','
+   500  0946  3422               	retlw	34	;'"'
+   501  0947  3400               	retlw	0
+   502  0948                     STR_5:	
+   503  0948  3449               	retlw	73	;'I'
+   504  0949  3450               	retlw	80	;'P'
+   505  094A  343A               	retlw	58	;':'
+   506  094B  3400               	retlw	0
+   507  094C                     STR_9:	
+   508  094C  3441               	retlw	65	;'A'
+   509  094D  3454               	retlw	84	;'T'
+   510  094E  3445               	retlw	69	;'E'
+   511  094F  3400               	retlw	0
+   512  0950                     STR_22:	
+   513  0950  3454               	retlw	84	;'T'
+   514  0951  3443               	retlw	67	;'C'
+   515  0952  3450               	retlw	80	;'P'
+   516  0953  3400               	retlw	0
+   517  0954                     STR_23:	
+   518  0954  3455               	retlw	85	;'U'
+   519  0955  3444               	retlw	68	;'D'
+   520  0956  3450               	retlw	80	;'P'
+   521  0957  3400               	retlw	0
+   522  0958                     STR_25:	
+   523  0958  3422               	retlw	34	;'"'
+   524  0959  342C               	retlw	44	;','
+   525  095A  3400               	retlw	0
+   526  095B                     STR_11:	
+   527  095B  344F               	retlw	79	;'O'
+   528  095C  344B               	retlw	75	;'K'
+   529  095D  3400               	retlw	0
+   530  095E                     STR_26:	
+   531  095E  3425               	retlw	37	;'%'
+   532  095F  3475               	retlw	117	;'u'
+   533  0960  3400               	retlw	0
+   534  092E                     
+   535                           ; #config settings
+   536  0000                     
+   537                           	psect	cinit
+   538  07E8                     start_initialization:	
+   539  07E8                     __initialization:	
+   540                           
+   541                           ; Initialize objects allocated to BANK0
+   542  07E8  1383               	bcf	3,7	;select IRP bank0
+   543  07E9  3056               	movlw	low (__pdataBANK0+12)
+   544  07EA  00FD               	movwf	btemp+-1
+   545  07EB  3004               	movlw	high __pidataBANK0
+   546  07EC  00FE               	movwf	btemp
+   547  07ED  3019               	movlw	low __pidataBANK0
+   548  07EE  00FF               	movwf	btemp+1
+   549  07EF  304A               	movlw	low __pdataBANK0
+   550  07F0  0084               	movwf	4
+   551  07F1  120A  118A  2429  120A  118A  	fcall	init_ram0
+   552                           
+   553                           ; Clear objects allocated to BANK0
+   554  07F6  3039               	movlw	low __pbssBANK0
+   555  07F7  0084               	movwf	4
+   556  07F8  304A               	movlw	low (__pbssBANK0+17)
+   557  07F9  120A  118A  23FC   	fcall	clear_ram0
+   558  07FC                     end_of_initialization:	
+   559                           ;End of C runtime variable initialization code
+   560                           
+   561  07FC                     __end_of__initialization:	
+   562  07FC  0183               	clrf	3
+   563  07FD  120A  118A  2F0F   	ljmp	_main	;jump to C main() function
+   564                           
+   565                           	psect	bssBANK0
+   566  0039                     __pbssBANK0:	
+   567  0039                     __esp8266_waitResponse@F1357:	
+   568  0039                     	ds	6
+   569  003F                     esp8266_send@F1341:	
+   570  003F                     	ds	6
+   571  0045                     esp8266_start@F1338:	
+   572  0045                     	ds	5
+   573                           
+   574                           	psect	dataBANK0
+   575  004A                     __pdataBANK0:	
+   576  004A                     __esp8266_waitResponse@F1360:	
+   577  004A                     	ds	12
+   578                           
+   579                           	psect	inittext
+   580  0425                     init_fetch0:	
+   581                           ;	Called with low address in FSR and high address in W
+   582                           
+   583  0425  087E               	movf	126,w
+   584  0426  008A               	movwf	10
+   585  0427  087F               	movf	127,w
+   586  0428  0082               	movwf	2
+   587  0429                     init_ram0:	
+   588                           ;Called with:
+   589                           ;	high address of idata address in btemp 
+   590                           ;	low address of idata address in btemp+1 
+   591                           ;	low address of data in FSR
+   592                           ;	high address + 1 of data in btemp-1
+   593                           
+   594  0429  2425  120A  118A   	fcall	init_fetch0
+   595  042C  0080               	movwf	0
+   596  042D  0A84               	incf	4,f
+   597  042E  0804               	movf	4,w
+   598  042F  067D               	xorwf	125,w
+   599  0430  1903               	btfsc	3,2
+   600  0431  3400               	retlw	0
+   601  0432  0AFF               	incf	127,f
+   602  0433  1903               	btfsc	3,2
+   603  0434  0AFE               	incf	126,f
+   604  0435  2C29               	goto	init_ram0
+   605                           
+   606                           	psect	clrtext
+   607  03FC                     clear_ram0:	
+   608                           ;	Called with FSR containing the base address, and
+   609                           ;	W with the last address+1
+   610                           
+   611  03FC  0064               	clrwdt	;clear the watchdog before getting into this loop
+   612  03FD                     clrloop0:	
+   613  03FD  0180               	clrf	0	;clear RAM location pointed to by FSR
+   614  03FE  0A84               	incf	4,f	;increment pointer
+   615  03FF  0604               	xorwf	4,w	;XOR with final address
+   616  0400  1903               	btfsc	3,2	;have we reached the end yet?
+   617  0401  3400               	retlw	0	;all done for this memory range, return
+   618  0402  0604               	xorwf	4,w	;XOR again to restore value
+   619  0403  2BFD               	goto	clrloop0	;do the next byte
+   620                           
+   621                           	psect	cstackCOMMON
+   622  0070                     __pcstackCOMMON:	
+   623  0070                     ?_esp8266_isStarted:	
+   624  0070                     ?__esp8266_waitResponse:	
+   625                           ; 1 bit 
+   626                           
+   627  0070                     ??__esp8266_waitResponse:	
+   628                           ; 1 bytes @ 0x0
+   629                           
+   630  0070                     ?_Lcd_Print_Char:	
+   631                           ; 1 bytes @ 0x0
+   632                           
+   633  0070                     ?_Initialize_ESP8266:	
+   634                           ; 1 bytes @ 0x0
+   635                           
+   636  0070                     ??_Initialize_ESP8266:	
+   637                           ; 1 bytes @ 0x0
+   638                           
+   639  0070                     ?__esp8266_putch:	
+   640                           ; 1 bytes @ 0x0
+   641                           
+   642  0070                     ??__esp8266_putch:	
+   643                           ; 1 bytes @ 0x0
+   644                           
+   645  0070                     ?__esp8266_getch:	
+   646                           ; 1 bytes @ 0x0
+   647                           
+   648  0070                     ??__esp8266_getch:	
+   649                           ; 1 bytes @ 0x0
+   650                           
+   651  0070                     ?_esp8266_mode:	
+   652                           ; 1 bytes @ 0x0
+   653                           
+   654  0070                     ?_Lcd_SetBit:	
+   655                           ; 1 bytes @ 0x0
+   656                           
+   657  0070                     ??_Lcd_SetBit:	
+   658                           ; 1 bytes @ 0x0
+   659                           
+   660  0070                     ?_Lcd_Cmd:	
+   661                           ; 1 bytes @ 0x0
+   662                           
+   663  0070                     ?_Lcd_Start:	
+   664                           ; 1 bytes @ 0x0
+   665                           
+   666  0070                     ?_main:	
+   667                           ; 1 bytes @ 0x0
+   668                           
+   669  0070                     ?_Lcd_Clear:	
+   670                           ; 1 bytes @ 0x0
+   671                           
+   672  0070                     __esp8266_putch@bt:	
+   673                           ; 2 bytes @ 0x0
+   674                           
+   675  0070                     Lcd_SetBit@data_bit:	
+   676                           ; 1 bytes @ 0x0
+   677                           
+   678                           
+   679                           ; 1 bytes @ 0x0
+   680  0070                     	ds	1
+   681  0071                     ?__esp8266_print:	
+   682  0071                     ??_Lcd_Print_Char:	
+   683                           ; 1 bytes @ 0x1
+   684                           
+   685  0071                     ??_Lcd_Cmd:	
+   686                           ; 1 bytes @ 0x1
+   687                           
+   688  0071                     __esp8266_print@ptr:	
+   689                           ; 1 bytes @ 0x1
+   690                           
+   691                           
+   692                           ; 2 bytes @ 0x1
+   693  0071                     	ds	1
+   694  0072                     Lcd_Print_Char@Lower_Nibble:	
+   695                           
+   696                           ; 1 bytes @ 0x2
+   697  0072                     	ds	1
+   698  0073                     ??__esp8266_print:	
+   699  0073                     Lcd_Cmd@a:	
+   700                           ; 1 bytes @ 0x3
+   701                           
+   702  0073                     Lcd_Print_Char@Upper_Nibble:	
+   703                           ; 1 bytes @ 0x3
+   704                           
+   705                           
+   706                           ; 1 bytes @ 0x3
+   707  0073                     	ds	1
+   708  0074                     ?_Lcd_Set_Cursor:	
+   709  0074                     ?_esp8266_config_softAP:	
+   710                           ; 1 bytes @ 0x4
+   711                           
+   712  0074                     ??_esp8266_isStarted:	
+   713                           ; 1 bytes @ 0x4
+   714                           
+   715  0074                     ??_esp8266_mode:	
+   716                           ; 1 bytes @ 0x4
+   717                           
+   718  0074                     ??_Lcd_Clear:	
+   719                           ; 1 bytes @ 0x4
+   720                           
+   721  0074                     ??_Lcd_Start:	
+   722                           ; 1 bytes @ 0x4
+   723                           
+   724  0074                     esp8266_mode@mode:	
+   725                           ; 1 bytes @ 0x4
+   726                           
+   727  0074                     Lcd_Set_Cursor@b:	
+   728                           ; 1 bytes @ 0x4
+   729                           
+   730  0074                     Lcd_Print_Char@data:	
+   731                           ; 1 bytes @ 0x4
+   732                           
+   733  0074                     esp8266_config_softAP@softssid:	
+   734                           ; 1 bytes @ 0x4
+   735                           
+   736                           
+   737                           ; 2 bytes @ 0x4
+   738  0074                     	ds	1
+   739  0075                     ??_Lcd_Set_Cursor:	
+   740  0075                     Lcd_Print_Char@i:	
+   741                           ; 1 bytes @ 0x5
+   742                           
+   743                           
+   744                           ; 2 bytes @ 0x5
+   745  0075                     	ds	1
+   746  0076                     esp8266_config_softAP@softpass:	
+   747  0076                     Lcd_Start@i:	
+   748                           ; 2 bytes @ 0x6
+   749                           
+   750                           
+   751                           ; 2 bytes @ 0x6
+   752  0076                     	ds	1
+   753  0077                     Lcd_Set_Cursor@a:	
+   754  0077                     Lcd_Print_Char@i_216:	
+   755                           ; 1 bytes @ 0x7
+   756                           
+   757                           
+   758                           ; 2 bytes @ 0x7
+   759  0077                     	ds	1
+   760  0078                     ??_esp8266_config_softAP:	
+   761  0078                     Lcd_Set_Cursor@z:	
+   762                           ; 1 bytes @ 0x8
+   763                           
+   764                           
+   765                           ; 1 bytes @ 0x8
+   766  0078                     	ds	1
+   767  0079                     ?_Lcd_Print_String:	
+   768  0079                     Lcd_Set_Cursor@y:	
+   769                           ; 1 bytes @ 0x9
+   770                           
+   771  0079                     Lcd_Print_String@a:	
+   772                           ; 1 bytes @ 0x9
+   773                           
+   774                           
+   775                           ; 2 bytes @ 0x9
+   776  0079                     	ds	1
+   777  007A                     Lcd_Set_Cursor@temp:	
+   778                           
+   779                           ; 1 bytes @ 0xA
+   780  007A                     	ds	1
+   781  007B                     ??_Lcd_Print_String:	
+   782                           
+   783                           ; 1 bytes @ 0xB
+   784  007B                     	ds	3
+   785                           
+   786                           	psect	cstackBANK0
+   787  0020                     __pcstackBANK0:	
+   788  0020                     Lcd_Print_String@i:	
+   789  0020                     __esp8266_waitResponse@strings:	
+   790                           ; 2 bytes @ 0x0
+   791                           
+   792                           
+   793                           ; 12 bytes @ 0x0
+   794  0020                     	ds	12
+   795  002C                     __esp8266_waitResponse@so_far:	
+   796                           
+   797                           ; 6 bytes @ 0xC
+   798  002C                     	ds	6
+   799  0032                     __esp8266_waitResponse@received:	
+   800                           
+   801                           ; 1 bytes @ 0x12
+   802  0032                     	ds	1
+   803  0033                     __esp8266_waitResponse@response:	
+   804                           
+   805                           ; 1 bytes @ 0x13
+   806  0033                     	ds	1
+   807  0034                     __esp8266_waitResponse@continue_loop:	
+   808                           
+   809                           ; 1 bytes @ 0x14
+   810  0034                     	ds	1
+   811  0035                     __esp8266_waitResponse@i:	
+   812                           
+   813                           ; 1 bytes @ 0x15
+   814  0035                     	ds	1
+   815  0036                     ??_main:	
+   816                           
+   817                           ; 1 bytes @ 0x16
+   818  0036                     	ds	3
+   819                           
+   820                           	psect	maintext
+   821  070F                     __pmaintext:	
+   822 ;;
+   823 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   824 ;;
+   825 ;; *************** function _main *****************
+   826 ;; Defined at:
+   827 ;;		line 129 in file "ESP_PIC.c"
+   828 ;; Parameters:    Size  Location     Type
+   829 ;;		None
+   830 ;; Auto vars:     Size  Location     Type
+   831 ;;		None
+   832 ;; Return value:  Size  Location     Type
+   833 ;;                  1    wreg      void 
+   834 ;; Registers used:
+   835 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   836 ;; Tracked objects:
+   837 ;;		On entry : B00/0
+   838 ;;		On exit  : 0/0
+   839 ;;		Unchanged: 0/0
+   840 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   841 ;;      Params:         0       0       0       0       0
+   842 ;;      Locals:         0       0       0       0       0
+   843 ;;      Temps:          0       3       0       0       0
+   844 ;;      Totals:         0       3       0       0       0
+   845 ;;Total ram usage:        3 bytes
+   846 ;; Hardware stack levels required when called:    3
+   847 ;; This function calls:
+   848 ;;		_Initialize_ESP8266
+   849 ;;		_Lcd_Clear
+   850 ;;		_Lcd_Print_String
+   851 ;;		_Lcd_Set_Cursor
+   852 ;;		_Lcd_Start
+   853 ;;		_esp8266_config_softAP
+   854 ;;		_esp8266_isStarted
+   855 ;;		_esp8266_mode
+   856 ;; This function is called by:
+   857 ;;		Startup code after reset
+   858 ;; This function uses a non-reentrant model
+   859 ;;
+   860                           
+   861                           
+   862                           ;psect for function _main
+   863  070F                     _main:	
+   864                           
+   865                           ;ESP_PIC.c: 131: TRISD = 0x00;
+   866                           
+   867                           ;incstack = 0
+   868                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   869  070F  1683               	bsf	3,5	;RP0=1, select bank1
+   870  0710  1303               	bcf	3,6	;RP1=0, select bank1
+   871  0711  0188               	clrf	8	;volatile
+   872                           
+   873                           ;ESP_PIC.c: 132: Lcd_Start();
+   874  0712  120A  118A  2605  120A  118A  	fcall	_Lcd_Start
+   875                           
+   876                           ;ESP_PIC.c: 133: Initialize_ESP8266() ;
+   877  0717  120A  118A  244B  120A  118A  	fcall	_Initialize_ESP8266
+   878                           
+   879                           ;ESP_PIC.c: 134: Lcd_Set_Cursor(1,1);
+   880  071C  01F4               	clrf	Lcd_Set_Cursor@b
+   881  071D  0AF4               	incf	Lcd_Set_Cursor@b,f
+   882  071E  3001               	movlw	1
+   883  071F  120A  118A  254A  120A  118A  	fcall	_Lcd_Set_Cursor
+   884                           
+   885                           ;ESP_PIC.c: 135: Lcd_Print_String("Circuit Digest");
+   886  0724  304A               	movlw	low (STR_40| (0+32768))
+   887  0725  00F9               	movwf	Lcd_Print_String@a
+   888  0726  3088               	movlw	high (STR_40| (0+32768))
+   889  0727  00FA               	movwf	Lcd_Print_String@a+1
+   890  0728  120A  118A  2509  120A  118A  	fcall	_Lcd_Print_String
+   891                           
+   892                           ;ESP_PIC.c: 136: Lcd_Set_Cursor(2,1);
+   893  072D  01F4               	clrf	Lcd_Set_Cursor@b
+   894  072E  0AF4               	incf	Lcd_Set_Cursor@b,f
+   895  072F  3002               	movlw	2
+   896  0730  120A  118A  254A  120A  118A  	fcall	_Lcd_Set_Cursor
+   897                           
+   898                           ;ESP_PIC.c: 137: Lcd_Print_String("ESP5266 with PIC");
+   899  0735  3028               	movlw	low (STR_41| (0+32768))
+   900  0736  00F9               	movwf	Lcd_Print_String@a
+   901  0737  3088               	movlw	high (STR_41| (0+32768))
+   902  0738  00FA               	movwf	Lcd_Print_String@a+1
+   903  0739  120A  118A  2509  120A  118A  	fcall	_Lcd_Print_String
+   904                           
+   905                           ;ESP_PIC.c: 138: _delay((unsigned long)((1500)*(20000000/4000.0)));
+   906  073E  3027               	movlw	39
+   907  073F  1283               	bcf	3,5	;RP0=0, select bank0
+   908  0740  1303               	bcf	3,6	;RP1=0, select bank0
+   909  0741  00B8               	movwf	??_main+2
+   910  0742  300D               	movlw	13
+   911  0743  00B7               	movwf	??_main+1
+   912  0744  304B               	movlw	75
+   913  0745  00B6               	movwf	??_main
+   914  0746                     u1347:	
+   915  0746  0BB6               	decfsz	??_main,f
+   916  0747  2F46               	goto	u1347
+   917  0748  0BB7               	decfsz	??_main+1,f
+   918  0749  2F46               	goto	u1347
+   919  074A  0BB8               	decfsz	??_main+2,f
+   920  074B  2F46               	goto	u1347
+   921  074C  0000               	nop
+   922                           
+   923                           ;ESP_PIC.c: 139: Lcd_Clear();
+   924  074D  120A  118A  240E  120A  118A  	fcall	_Lcd_Clear
+   925  0752                     l1679:	
+   926                           ;ESP_PIC.c: 142: do
+   927                           
+   928                           
+   929                           ;ESP_PIC.c: 143: {
+   930                           ;ESP_PIC.c: 144: Lcd_Set_Cursor(1,1);
+   931  0752  01F4               	clrf	Lcd_Set_Cursor@b
+   932  0753  0AF4               	incf	Lcd_Set_Cursor@b,f
+   933  0754  3001               	movlw	1
+   934  0755  120A  118A  254A  120A  118A  	fcall	_Lcd_Set_Cursor
+   935                           
+   936                           ;ESP_PIC.c: 145: Lcd_Print_String("ESP not found");
+   937  075A  3083               	movlw	low (STR_42| (0+32768))
+   938  075B  00F9               	movwf	Lcd_Print_String@a
+   939  075C  3088               	movlw	high (STR_42| (0+32768))
+   940  075D  00FA               	movwf	Lcd_Print_String@a+1
+   941  075E  120A  118A  2509  120A  118A  	fcall	_Lcd_Print_String
+   942                           
+   943                           ;ESP_PIC.c: 146: }while (!esp8266_isStarted());
+   944  0763  120A  118A  2436  120A  118A  	fcall	_esp8266_isStarted
+   945  0768  1C03               	btfss	3,0
+   946  0769  2F52               	goto	l1679
+   947                           
+   948                           ;ESP_PIC.c: 147: Lcd_Set_Cursor(1,1);
+   949  076A  01F4               	clrf	Lcd_Set_Cursor@b
+   950  076B  0AF4               	incf	Lcd_Set_Cursor@b,f
+   951  076C  3001               	movlw	1
+   952  076D  120A  118A  254A  120A  118A  	fcall	_Lcd_Set_Cursor
+   953                           
+   954                           ;ESP_PIC.c: 148: Lcd_Print_String("ESP is connected");
+   955  0772  3039               	movlw	low (STR_43| (0+32768))
+   956  0773  00F9               	movwf	Lcd_Print_String@a
+   957  0774  3088               	movlw	high (STR_43| (0+32768))
+   958  0775  00FA               	movwf	Lcd_Print_String@a+1
+   959  0776  120A  118A  2509  120A  118A  	fcall	_Lcd_Print_String
+   960                           
+   961                           ;ESP_PIC.c: 149: _delay((unsigned long)((1500)*(20000000/4000.0)));
+   962  077B  3027               	movlw	39
+   963  077C  1283               	bcf	3,5	;RP0=0, select bank0
+   964  077D  1303               	bcf	3,6	;RP1=0, select bank0
+   965  077E  00B8               	movwf	??_main+2
+   966  077F  300D               	movlw	13
+   967  0780  00B7               	movwf	??_main+1
+   968  0781  304B               	movlw	75
+   969  0782  00B6               	movwf	??_main
+   970  0783                     u1357:	
+   971  0783  0BB6               	decfsz	??_main,f
+   972  0784  2F83               	goto	u1357
+   973  0785  0BB7               	decfsz	??_main+1,f
+   974  0786  2F83               	goto	u1357
+   975  0787  0BB8               	decfsz	??_main+2,f
+   976  0788  2F83               	goto	u1357
+   977  0789  0000               	nop
+   978                           
+   979                           ;ESP_PIC.c: 150: Lcd_Clear();
+   980  078A  120A  118A  240E  120A  118A  	fcall	_Lcd_Clear
+   981                           
+   982                           ;ESP_PIC.c: 154: esp8266_mode(2);
+   983  078F  3002               	movlw	2
+   984  0790  120A  118A  2497  120A  118A  	fcall	_esp8266_mode
+   985                           
+   986                           ;ESP_PIC.c: 155: Lcd_Set_Cursor(1,1);
+   987  0795  01F4               	clrf	Lcd_Set_Cursor@b
+   988  0796  0AF4               	incf	Lcd_Set_Cursor@b,f
+   989  0797  3001               	movlw	1
+   990  0798  120A  118A  254A  120A  118A  	fcall	_Lcd_Set_Cursor
+   991                           
+   992                           ;ESP_PIC.c: 156: Lcd_Print_String("ESP set as AP");
+   993  079D  3067               	movlw	low (STR_44| (0+32768))
+   994  079E  00F9               	movwf	Lcd_Print_String@a
+   995  079F  3088               	movlw	high (STR_44| (0+32768))
+   996  07A0  00FA               	movwf	Lcd_Print_String@a+1
+   997  07A1  120A  118A  2509  120A  118A  	fcall	_Lcd_Print_String
+   998                           
+   999                           ;ESP_PIC.c: 157: _delay((unsigned long)((1500)*(20000000/4000.0)));
+  1000  07A6  3027               	movlw	39
+  1001  07A7  1283               	bcf	3,5	;RP0=0, select bank0
+  1002  07A8  1303               	bcf	3,6	;RP1=0, select bank0
+  1003  07A9  00B8               	movwf	??_main+2
+  1004  07AA  300D               	movlw	13
+  1005  07AB  00B7               	movwf	??_main+1
+  1006  07AC  304B               	movlw	75
+  1007  07AD  00B6               	movwf	??_main
+  1008  07AE                     u1367:	
+  1009  07AE  0BB6               	decfsz	??_main,f
+  1010  07AF  2FAE               	goto	u1367
+  1011  07B0  0BB7               	decfsz	??_main+1,f
+  1012  07B1  2FAE               	goto	u1367
+  1013  07B2  0BB8               	decfsz	??_main+2,f
+  1014  07B3  2FAE               	goto	u1367
+  1015  07B4  0000               	nop
+  1016                           
+  1017                           ;ESP_PIC.c: 158: Lcd_Clear();
+  1018  07B5  120A  118A  240E  120A  118A  	fcall	_Lcd_Clear
+  1019                           
+  1020                           ;ESP_PIC.c: 162: esp8266_config_softAP("CircuitDigest","619007123");
+  1021  07BA  3091               	movlw	low (STR_45| (0+32768))
+  1022  07BB  00F4               	movwf	esp8266_config_softAP@softssid
+  1023  07BC  3088               	movlw	high (STR_45| (0+32768))
+  1024  07BD  00F5               	movwf	esp8266_config_softAP@softssid+1
+  1025  07BE  30ED               	movlw	low (STR_46| (0+32768))
+  1026  07BF  00F6               	movwf	esp8266_config_softAP@softpass
+  1027  07C0  3088               	movlw	high (STR_46| (0+32768))
+  1028  07C1  00F7               	movwf	esp8266_config_softAP@softpass+1
+  1029  07C2  120A  118A  24D8  120A  118A  	fcall	_esp8266_config_softAP
+  1030                           
+  1031                           ;ESP_PIC.c: 163: Lcd_Set_Cursor(1,1);
+  1032  07C7  01F4               	clrf	Lcd_Set_Cursor@b
+  1033  07C8  0AF4               	incf	Lcd_Set_Cursor@b,f
+  1034  07C9  3001               	movlw	1
+  1035  07CA  120A  118A  254A  120A  118A  	fcall	_Lcd_Set_Cursor
+  1036                           
+  1037                           ;ESP_PIC.c: 164: Lcd_Print_String("AP configured");
+  1038  07CF  3075               	movlw	low (STR_47| (0+32768))
+  1039  07D0  00F9               	movwf	Lcd_Print_String@a
+  1040  07D1  3088               	movlw	high (STR_47| (0+32768))
+  1041  07D2  00FA               	movwf	Lcd_Print_String@a+1
+  1042  07D3  120A  118A  2509  120A  118A  	fcall	_Lcd_Print_String
+  1043                           
+  1044                           ;ESP_PIC.c: 165: _delay((unsigned long)((1500)*(20000000/4000.0)));
+  1045  07D8  3027               	movlw	39
+  1046  07D9  1283               	bcf	3,5	;RP0=0, select bank0
+  1047  07DA  1303               	bcf	3,6	;RP1=0, select bank0
+  1048  07DB  00B8               	movwf	??_main+2
+  1049  07DC  300D               	movlw	13
+  1050  07DD  00B7               	movwf	??_main+1
+  1051  07DE  304B               	movlw	75
+  1052  07DF  00B6               	movwf	??_main
+  1053  07E0                     u1377:	
+  1054  07E0  0BB6               	decfsz	??_main,f
+  1055  07E1  2FE0               	goto	u1377
+  1056  07E2  0BB7               	decfsz	??_main+1,f
+  1057  07E3  2FE0               	goto	u1377
+  1058  07E4  0BB8               	decfsz	??_main+2,f
+  1059  07E5  2FE0               	goto	u1377
+  1060  07E6  0000               	nop
+  1061  07E7                     l239:	
+  1062                           ;ESP_PIC.c: 170: while(1)
+  1063                           
+  1064                           
+  1065                           ;ESP_PIC.c: 171: {
+  1066  07E7  2FE7               	goto	l239
+  1067  07E8                     __end_of_main:	
+  1068                           
+  1069                           	psect	text1
+  1070  0497                     __ptext1:	
+  1071 ;; *************** function _esp8266_mode *****************
+  1072 ;; Defined at:
+  1073 ;;		line 257 in file "esp8266_functions.h"
+  1074 ;; Parameters:    Size  Location     Type
+  1075 ;;  mode            1    wreg     unsigned char 
+  1076 ;; Auto vars:     Size  Location     Type
+  1077 ;;  mode            1    4[COMMON] unsigned char 
+  1078 ;; Return value:  Size  Location     Type
+  1079 ;;                  1    wreg      void 
+  1080 ;; Registers used:
+  1081 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  1082 ;; Tracked objects:
+  1083 ;;		On entry : 0/0
+  1084 ;;		On exit  : 0/0
+  1085 ;;		Unchanged: 0/0
+  1086 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1087 ;;      Params:         0       0       0       0       0
+  1088 ;;      Locals:         1       0       0       0       0
+  1089 ;;      Temps:          0       0       0       0       0
+  1090 ;;      Totals:         1       0       0       0       0
+  1091 ;;Total ram usage:        1 bytes
+  1092 ;; Hardware stack levels used:    1
+  1093 ;; Hardware stack levels required when called:    2
+  1094 ;; This function calls:
+  1095 ;;		__esp8266_print
+  1096 ;;		__esp8266_putch
+  1097 ;;		__esp8266_waitResponse
+  1098 ;; This function is called by:
+  1099 ;;		_main
+  1100 ;; This function uses a non-reentrant model
+  1101 ;;
+  1102                           
+  1103                           
+  1104                           ;psect for function _esp8266_mode
+  1105  0497                     _esp8266_mode:	
+  1106                           
+  1107                           ;incstack = 0
+  1108                           ; Regs used in _esp8266_mode: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+  1109                           ;esp8266_mode@mode stored from wreg
+  1110  0497  00F4               	movwf	esp8266_mode@mode
+  1111                           
+  1112                           ;esp8266_functions.h: 258: _esp8266_print("AT+CWMODE=");
+  1113  0498  30E2               	movlw	low (STR_12| (0+32768))
+  1114  0499  00F1               	movwf	__esp8266_print@ptr
+  1115  049A  3088               	movlw	high (STR_12| (0+32768))
+  1116  049B  00F2               	movwf	__esp8266_print@ptr+1
+  1117  049C  120A  118A  24B5  120A  118A  	fcall	__esp8266_print
+  1118                           
+  1119                           ;esp8266_functions.h: 259: _esp8266_putch(mode + '0');
+  1120  04A1  0874               	movf	esp8266_mode@mode,w
+  1121  04A2  3E30               	addlw	48
+  1122  04A3  120A  118A  23F4  120A  118A  	fcall	__esp8266_putch
+  1123                           
+  1124                           ;esp8266_functions.h: 260: _esp8266_print("\r\n");
+  1125  04A8  302E               	movlw	low ((STR_32+2)| (0+32768))
+  1126  04A9  00F1               	movwf	__esp8266_print@ptr
+  1127  04AA  3089               	movlw	high ((STR_32+2)| (0+32768))
+  1128  04AB  00F2               	movwf	__esp8266_print@ptr+1
+  1129  04AC  120A  118A  24B5  120A  118A  	fcall	__esp8266_print
+  1130                           
+  1131                           ;esp8266_functions.h: 261: _esp8266_waitResponse();
+  1132  04B1  120A  118A  2679   	fcall	__esp8266_waitResponse
+  1133  04B4  0008               	return
+  1134  04B5                     __end_of_esp8266_mode:	
+  1135                           
+  1136                           	psect	text2
+  1137  0436                     __ptext2:	
+  1138 ;; *************** function _esp8266_isStarted *****************
+  1139 ;; Defined at:
+  1140 ;;		line 205 in file "esp8266_functions.h"
+  1141 ;; Parameters:    Size  Location     Type
+  1142 ;;		None
+  1143 ;; Auto vars:     Size  Location     Type
+  1144 ;;		None
+  1145 ;; Return value:  Size  Location     Type
+  1146 ;;		None               void
+  1147 ;; Registers used:
+  1148 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  1149 ;; Tracked objects:
+  1150 ;;		On entry : 0/0
+  1151 ;;		On exit  : 0/0
+  1152 ;;		Unchanged: 0/0
+  1153 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1154 ;;      Params:         0       0       0       0       0
+  1155 ;;      Locals:         0       0       0       0       0
+  1156 ;;      Temps:          0       0       0       0       0
+  1157 ;;      Totals:         0       0       0       0       0
+  1158 ;;Total ram usage:        0 bytes
+  1159 ;; Hardware stack levels used:    1
+  1160 ;; Hardware stack levels required when called:    2
+  1161 ;; This function calls:
+  1162 ;;		__esp8266_print
+  1163 ;;		__esp8266_waitResponse
+  1164 ;; This function is called by:
+  1165 ;;		_main
+  1166 ;; This function uses a non-reentrant model
+  1167 ;;
+  1168                           
+  1169                           
+  1170                           ;psect for function _esp8266_isStarted
+  1171  0436                     _esp8266_isStarted:	
+  1172                           
+  1173                           ;esp8266_functions.h: 206: _esp8266_print("AT\r\n");
+  1174                           
+  1175                           ;incstack = 0
+  1176                           ; Regs used in _esp8266_isStarted: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+  1177  0436  3031               	movlw	low (STR_7| (0+32768))
+  1178  0437  00F1               	movwf	__esp8266_print@ptr
+  1179  0438  3089               	movlw	high (STR_7| (0+32768))
+  1180  0439  00F2               	movwf	__esp8266_print@ptr+1
+  1181  043A  120A  118A  24B5  120A  118A  	fcall	__esp8266_print
+  1182                           
+  1183                           ;esp8266_functions.h: 207: return (_esp8266_waitResponse() == 1);
+  1184  043F  120A  118A  2679  120A  118A  	fcall	__esp8266_waitResponse
+  1185  0444  3A01               	xorlw	1
+  1186  0445  1903               	skipnz
+  1187  0446  2C49               	goto	l1381
+  1188  0447  1003               	clrc
+  1189  0448  0008               	return
+  1190  0449                     l1381:	
+  1191  0449  1403               	setc
+  1192  044A  0008               	return
+  1193  044B                     __end_of_esp8266_isStarted:	
+  1194                           
+  1195                           	psect	text3
+  1196  04D8                     __ptext3:	
+  1197 ;; *************** function _esp8266_config_softAP *****************
+  1198 ;; Defined at:
+  1199 ;;		line 163 in file "esp8266_functions.h"
+  1200 ;; Parameters:    Size  Location     Type
+  1201 ;;  softssid        2    4[COMMON] PTR unsigned char 
+  1202 ;;		 -> STR_45(14), 
+  1203 ;;  softpass        2    6[COMMON] PTR unsigned char 
+  1204 ;;		 -> STR_46(10), 
+  1205 ;; Auto vars:     Size  Location     Type
+  1206 ;;		None
+  1207 ;; Return value:  Size  Location     Type
+  1208 ;;                  1    wreg      unsigned char 
+  1209 ;; Registers used:
+  1210 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  1211 ;; Tracked objects:
+  1212 ;;		On entry : 0/0
+  1213 ;;		On exit  : 0/0
+  1214 ;;		Unchanged: 0/0
+  1215 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1216 ;;      Params:         4       0       0       0       0
+  1217 ;;      Locals:         0       0       0       0       0
+  1218 ;;      Temps:          0       0       0       0       0
+  1219 ;;      Totals:         4       0       0       0       0
+  1220 ;;Total ram usage:        4 bytes
+  1221 ;; Hardware stack levels used:    1
+  1222 ;; Hardware stack levels required when called:    2
+  1223 ;; This function calls:
+  1224 ;;		__esp8266_print
+  1225 ;;		__esp8266_waitResponse
+  1226 ;; This function is called by:
+  1227 ;;		_main
+  1228 ;; This function uses a non-reentrant model
+  1229 ;;
+  1230                           
+  1231                           
+  1232                           ;psect for function _esp8266_config_softAP
+  1233  04D8                     _esp8266_config_softAP:	
+  1234                           
+  1235                           ;esp8266_functions.h: 164: _esp8266_print("AT+CWSAP=\"");
+  1236                           
+  1237                           ;incstack = 0
+  1238                           ; Regs used in _esp8266_config_softAP: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+csta
+      +                          ck]
+  1239  04D8  30D7               	movlw	low (STR_1| (0+32768))
+  1240  04D9  00F1               	movwf	__esp8266_print@ptr
+  1241  04DA  3088               	movlw	high (STR_1| (0+32768))
+  1242  04DB  00F2               	movwf	__esp8266_print@ptr+1
+  1243  04DC  120A  118A  24B5  120A  118A  	fcall	__esp8266_print
+  1244                           
+  1245                           ;esp8266_functions.h: 165: _esp8266_print(softssid);
+  1246  04E1  0874               	movf	esp8266_config_softAP@softssid,w
+  1247  04E2  00F1               	movwf	__esp8266_print@ptr
+  1248  04E3  0875               	movf	esp8266_config_softAP@softssid+1,w
+  1249  04E4  00F2               	movwf	__esp8266_print@ptr+1
+  1250  04E5  120A  118A  24B5  120A  118A  	fcall	__esp8266_print
+  1251                           
+  1252                           ;esp8266_functions.h: 166: _esp8266_print("\",\"");
+  1253  04EA  3044               	movlw	low (STR_2| (0+32768))
+  1254  04EB  00F1               	movwf	__esp8266_print@ptr
+  1255  04EC  3089               	movlw	high (STR_2| (0+32768))
+  1256  04ED  00F2               	movwf	__esp8266_print@ptr+1
+  1257  04EE  120A  118A  24B5  120A  118A  	fcall	__esp8266_print
+  1258                           
+  1259                           ;esp8266_functions.h: 167: _esp8266_print(softpass);
+  1260  04F3  0876               	movf	esp8266_config_softAP@softpass,w
+  1261  04F4  00F1               	movwf	__esp8266_print@ptr
+  1262  04F5  0877               	movf	esp8266_config_softAP@softpass+1,w
+  1263  04F6  00F2               	movwf	__esp8266_print@ptr+1
+  1264  04F7  120A  118A  24B5  120A  118A  	fcall	__esp8266_print
+  1265                           
+  1266                           ;esp8266_functions.h: 168: _esp8266_print("\",5,3\r\n");
+  1267  04FC  300A               	movlw	low (STR_3| (0+32768))
+  1268  04FD  00F1               	movwf	__esp8266_print@ptr
+  1269  04FE  3089               	movlw	high (STR_3| (0+32768))
+  1270  04FF  00F2               	movwf	__esp8266_print@ptr+1
+  1271  0500  120A  118A  24B5  120A  118A  	fcall	__esp8266_print
+  1272                           
+  1273                           ;esp8266_functions.h: 169: return _esp8266_waitResponse();
+  1274                           ;	Return value of _esp8266_config_softAP is never used
+  1275  0505  120A  118A  2679   	fcall	__esp8266_waitResponse
+  1276  0508  0008               	return
+  1277  0509                     __end_of_esp8266_config_softAP:	
+  1278                           
+  1279                           	psect	text4
+  1280  0679                     __ptext4:	
+  1281 ;; *************** function __esp8266_waitResponse *****************
+  1282 ;; Defined at:
+  1283 ;;		line 477 in file "esp8266_functions.h"
+  1284 ;; Parameters:    Size  Location     Type
+  1285 ;;		None
+  1286 ;; Auto vars:     Size  Location     Type
+  1287 ;;  i               1   21[BANK0 ] unsigned char 
+  1288 ;;  strings        12    0[BANK0 ] PTR const unsigned char 
+  1289 ;;		 -> STR_39(7), STR_38(7), STR_37(10), STR_36(5), 
+  1290 ;;		 -> STR_35(6), STR_34(3), 
+  1291 ;;  so_far          6   12[BANK0 ] unsigned char [6]
+  1292 ;;  continue_loo    1   20[BANK0 ] unsigned char 
+  1293 ;;  response        1   19[BANK0 ] unsigned char 
+  1294 ;;  received        1   18[BANK0 ] unsigned char 
+  1295 ;; Return value:  Size  Location     Type
+  1296 ;;                  1    wreg      unsigned char 
+  1297 ;; Registers used:
+  1298 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  1299 ;; Tracked objects:
+  1300 ;;		On entry : 0/0
+  1301 ;;		On exit  : 0/0
+  1302 ;;		Unchanged: 0/0
+  1303 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1304 ;;      Params:         0       0       0       0       0
+  1305 ;;      Locals:         0      22       0       0       0
+  1306 ;;      Temps:          4       0       0       0       0
+  1307 ;;      Totals:         4      22       0       0       0
+  1308 ;;Total ram usage:       26 bytes
+  1309 ;; Hardware stack levels used:    1
+  1310 ;; Hardware stack levels required when called:    1
+  1311 ;; This function calls:
+  1312 ;;		__esp8266_getch
+  1313 ;; This function is called by:
+  1314 ;;		_esp8266_config_softAP
+  1315 ;;		_esp8266_isStarted
+  1316 ;;		_esp8266_mode
+  1317 ;;		_esp8266_restart
+  1318 ;;		_esp8266_connect
+  1319 ;;		_esp8266_start
+  1320 ;;		_esp8266_send
+  1321 ;; This function uses a non-reentrant model
+  1322 ;;
+  1323                           
+  1324                           
+  1325                           ;psect for function __esp8266_waitResponse
+  1326  0679                     __esp8266_waitResponse:	
+  1327                           
+  1328                           ;esp8266_functions.h: 478: unsigned char so_far[6] = {0,0,0,0,0,0};
+  1329                           
+  1330                           ;incstack = 0
+  1331                           ; Regs used in __esp8266_waitResponse: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+csta
+      +                          ck]
+  1332  0679  302C               	movlw	__esp8266_waitResponse@so_far& (0+255)
+  1333  067A  0084               	movwf	4
+  1334  067B  1283               	bcf	3,5	;RP0=0, select bank0
+  1335  067C  1303               	bcf	3,6	;RP1=0, select bank0
+  1336  067D  0839               	movf	__esp8266_waitResponse@F1357,w
+  1337  067E  1383               	bcf	3,7	;select IRP bank0
+  1338  067F  0080               	movwf	0
+  1339  0680  0A84               	incf	4,f
+  1340  0681  083A               	movf	__esp8266_waitResponse@F1357+1,w
+  1341  0682  0080               	movwf	0
+  1342  0683  0A84               	incf	4,f
+  1343  0684  083B               	movf	__esp8266_waitResponse@F1357+2,w
+  1344  0685  0080               	movwf	0
+  1345  0686  0A84               	incf	4,f
+  1346  0687  083C               	movf	__esp8266_waitResponse@F1357+3,w
+  1347  0688  0080               	movwf	0
+  1348  0689  0A84               	incf	4,f
+  1349  068A  083D               	movf	__esp8266_waitResponse@F1357+4,w
+  1350  068B  0080               	movwf	0
+  1351  068C  0A84               	incf	4,f
+  1352  068D  083E               	movf	__esp8266_waitResponse@F1357+5,w
+  1353  068E  0080               	movwf	0
+  1354                           
+  1355                           ;esp8266_functions.h: 479: unsigned const char lengths[6] = {2,5,4,9,6,6};
+  1356                           ;esp8266_functions.h: 480: unsigned const char* strings[6] = {"OK", "ready", "FAIL", "no
+      +                           change", "Linked", "Unlink"};
+  1357  068F  3020               	movlw	__esp8266_waitResponse@strings& (0+255)
+  1358  0690  0084               	movwf	4
+  1359  0691  304A               	movlw	low __esp8266_waitResponse@F1360
+  1360  0692  00F0               	movwf	??__esp8266_waitResponse
+  1361  0693  0804               	movf	4,w
+  1362  0694  00F1               	movwf	??__esp8266_waitResponse+1
+  1363  0695  300C               	movlw	12
+  1364  0696  00F2               	movwf	??__esp8266_waitResponse+2
+  1365  0697                     u610:	
+  1366  0697  0870               	movf	??__esp8266_waitResponse,w
+  1367  0698  0084               	movwf	4
+  1368  0699  1383               	bcf	3,7	;select IRP bank0
+  1369  069A  0800               	movf	0,w
+  1370  069B  00F3               	movwf	??__esp8266_waitResponse+3
+  1371  069C  0AF0               	incf	??__esp8266_waitResponse,f
+  1372  069D  0871               	movf	??__esp8266_waitResponse+1,w
+  1373  069E  0084               	movwf	4
+  1374  069F  0873               	movf	??__esp8266_waitResponse+3,w
+  1375  06A0  0080               	movwf	0
+  1376  06A1  0AF1               	incf	??__esp8266_waitResponse+1,f
+  1377  06A2  0BF2               	decfsz	??__esp8266_waitResponse+2,f
+  1378  06A3  2E97               	goto	u610
+  1379                           
+  1380                           ;esp8266_functions.h: 481: unsigned const char responses[6] = {1, 2, 3, 4, 5, 6};
+  1381                           ;esp8266_functions.h: 482: unsigned char received;
+  1382                           ;esp8266_functions.h: 483: unsigned char response;
+  1383                           ;esp8266_functions.h: 484: bool continue_loop = 1;
+  1384  06A4  01B4               	clrf	__esp8266_waitResponse@continue_loop
+  1385  06A5  0AB4               	incf	__esp8266_waitResponse@continue_loop,f
+  1386  06A6                     l1289:	
+  1387                           ;esp8266_functions.h: 485: while (continue_loop) {
+  1388                           
+  1389  06A6  0834               	movf	__esp8266_waitResponse@continue_loop,w
+  1390  06A7  1903               	btfsc	3,2
+  1391  06A8  2F0D               	goto	l1291
+  1392                           
+  1393                           ;esp8266_functions.h: 486: received = _esp8266_getch();
+  1394  06A9  120A  118A  2404  120A  118A  	fcall	__esp8266_getch
+  1395  06AE  00F0               	movwf	??__esp8266_waitResponse
+  1396  06AF  0870               	movf	??__esp8266_waitResponse,w
+  1397  06B0  1283               	bcf	3,5	;RP0=0, select bank0
+  1398  06B1  1303               	bcf	3,6	;RP1=0, select bank0
+  1399  06B2  00B2               	movwf	__esp8266_waitResponse@received
+  1400                           
+  1401                           ;esp8266_functions.h: 487: for (unsigned char i = 0; i < 6; i++) {
+  1402  06B3  01B5               	clrf	__esp8266_waitResponse@i
+  1403  06B4                     L1:	
+  1404  06B4  3006               	movlw	6
+  1405  06B5  0235               	subwf	__esp8266_waitResponse@i,w
+  1406  06B6  1803               	btfsc	3,0
+  1407  06B7  2EA6               	goto	l1289
+  1408                           
+  1409                           ;esp8266_functions.h: 488: if (strings[i][so_far[i]] == received) {
+  1410  06B8  0835               	movf	__esp8266_waitResponse@i,w
+  1411  06B9  00F0               	movwf	??__esp8266_waitResponse
+  1412  06BA  0770               	addwf	??__esp8266_waitResponse,w
+  1413  06BB  3E20               	addlw	(low (__esp8266_waitResponse@strings| 0))& (0+255)
+  1414  06BC  0084               	movwf	4
+  1415  06BD  1383               	bcf	3,7	;select IRP bank0
+  1416  06BE  0800               	movf	0,w
+  1417  06BF  00F1               	movwf	??__esp8266_waitResponse+1
+  1418  06C0  0A84               	incf	4,f
+  1419  06C1  0800               	movf	0,w
+  1420  06C2  00F2               	movwf	??__esp8266_waitResponse+2
+  1421  06C3  0835               	movf	__esp8266_waitResponse@i,w
+  1422  06C4  3E2C               	addlw	(low (__esp8266_waitResponse@so_far| 0))& (0+255)
+  1423  06C5  0084               	movwf	4
+  1424  06C6  0800               	movf	0,w
+  1425  06C7  0771               	addwf	??__esp8266_waitResponse+1,w
+  1426  06C8  0084               	movwf	4
+  1427  06C9  0872               	movf	??__esp8266_waitResponse+2,w
+  1428  06CA  1803               	skipnc
+  1429  06CB  0A72               	incf	??__esp8266_waitResponse+2,w
+  1430  06CC  00FF               	movwf	127
+  1431  06CD  120A  158A  2000  120A  118A  	fcall	stringtab
+  1432  06D2  0632               	xorwf	__esp8266_waitResponse@received,w
+  1433  06D3  1D03               	skipz
+  1434  06D4  2F03               	goto	l1283
+  1435                           
+  1436                           ;esp8266_functions.h: 489: so_far[i]++;
+  1437  06D5  3001               	movlw	1
+  1438  06D6  00F0               	movwf	??__esp8266_waitResponse
+  1439  06D7  0835               	movf	__esp8266_waitResponse@i,w
+  1440  06D8  3E2C               	addlw	(low (__esp8266_waitResponse@so_far| 0))& (0+255)
+  1441  06D9  0084               	movwf	4
+  1442  06DA  0870               	movf	??__esp8266_waitResponse,w
+  1443  06DB  1383               	bcf	3,7	;select IRP bank0
+  1444  06DC  0780               	addwf	0,f
+  1445                           
+  1446                           ;esp8266_functions.h: 490: if (so_far[i] == lengths[i]) {
+  1447  06DD  0835               	movf	__esp8266_waitResponse@i,w
+  1448  06DE  3E1C               	addlw	low (__esp8266_waitResponse@lengths| (0+32768))
+  1449  06DF  0084               	movwf	4
+  1450  06E0  3088               	movlw	high (__esp8266_waitResponse@lengths| (0+32768))
+  1451  06E1  1803               	skipnc
+  1452  06E2  3E01               	addlw	1
+  1453  06E3  00FF               	movwf	127
+  1454  06E4  120A  158A  2000  120A  118A  	fcall	stringtab
+  1455  06E9  00F0               	movwf	??__esp8266_waitResponse
+  1456  06EA  0835               	movf	__esp8266_waitResponse@i,w
+  1457  06EB  3E2C               	addlw	(low (__esp8266_waitResponse@so_far| 0))& (0+255)
+  1458  06EC  0084               	movwf	4
+  1459  06ED  1383               	bcf	3,7	;select IRP bank0
+  1460  06EE  0800               	movf	0,w
+  1461  06EF  0670               	xorwf	??__esp8266_waitResponse,w
+  1462  06F0  1D03               	skipz
+  1463  06F1  2F08               	goto	l1285
+  1464                           
+  1465                           ;esp8266_functions.h: 491: response = responses[i];
+  1466  06F2  0835               	movf	__esp8266_waitResponse@i,w
+  1467  06F3  3E22               	addlw	low (__esp8266_waitResponse@responses| (0+32768))
+  1468  06F4  0084               	movwf	4
+  1469  06F5  3088               	movlw	high (__esp8266_waitResponse@responses| (0+32768))
+  1470  06F6  1803               	skipnc
+  1471  06F7  3E01               	addlw	1
+  1472  06F8  00FF               	movwf	127
+  1473  06F9  120A  158A  2000  120A  118A  	fcall	stringtab
+  1474  06FE  00F0               	movwf	??__esp8266_waitResponse
+  1475  06FF  0870               	movf	??__esp8266_waitResponse,w
+  1476  0700  00B3               	movwf	__esp8266_waitResponse@response
+  1477                           
+  1478                           ;esp8266_functions.h: 492: continue_loop = 0;
+  1479  0701  01B4               	clrf	__esp8266_waitResponse@continue_loop
+  1480                           
+  1481                           ;esp8266_functions.h: 493: }
+  1482                           ;esp8266_functions.h: 494: } else {
+  1483  0702  2F08               	goto	l1285
+  1484  0703                     l1283:	
+  1485                           
+  1486                           ;esp8266_functions.h: 495: so_far[i] = 0;
+  1487  0703  0835               	movf	__esp8266_waitResponse@i,w
+  1488  0704  3E2C               	addlw	(low (__esp8266_waitResponse@so_far| 0))& (0+255)
+  1489  0705  0084               	movwf	4
+  1490  0706  1383               	bcf	3,7	;select IRP bank0
+  1491  0707  0180               	clrf	0
+  1492  0708                     l1285:	
+  1493  0708  3001               	movlw	1
+  1494  0709  00F0               	movwf	??__esp8266_waitResponse
+  1495  070A  0870               	movf	??__esp8266_waitResponse,w
+  1496  070B  07B5               	addwf	__esp8266_waitResponse@i,f
+  1497  070C  2EB4               	goto	L1
+  1498  070D                     l1291:	
+  1499                           
+  1500                           ;esp8266_functions.h: 496: }
+  1501                           ;esp8266_functions.h: 497: }
+  1502                           ;esp8266_functions.h: 498: }
+  1503                           ;esp8266_functions.h: 499: return response;
+  1504  070D  0833               	movf	__esp8266_waitResponse@response,w
+  1505  070E  0008               	return
+  1506  070F                     __end_of__esp8266_waitResponse:	
+  1507                           
+  1508                           	psect	text5
+  1509  0404                     __ptext5:	
+  1510 ;; *************** function __esp8266_getch *****************
+  1511 ;; Defined at:
+  1512 ;;		line 137 in file "esp8266_functions.h"
+  1513 ;; Parameters:    Size  Location     Type
+  1514 ;;		None
+  1515 ;; Auto vars:     Size  Location     Type
+  1516 ;;		None
+  1517 ;; Return value:  Size  Location     Type
+  1518 ;;                  1    wreg      unsigned char 
+  1519 ;; Registers used:
+  1520 ;;		wreg
+  1521 ;; Tracked objects:
+  1522 ;;		On entry : 0/0
+  1523 ;;		On exit  : 0/0
+  1524 ;;		Unchanged: 0/0
+  1525 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1526 ;;      Params:         0       0       0       0       0
+  1527 ;;      Locals:         0       0       0       0       0
+  1528 ;;      Temps:          0       0       0       0       0
+  1529 ;;      Totals:         0       0       0       0       0
+  1530 ;;Total ram usage:        0 bytes
+  1531 ;; Hardware stack levels used:    1
+  1532 ;; This function calls:
+  1533 ;;		Nothing
+  1534 ;; This function is called by:
+  1535 ;;		__esp8266_waitResponse
+  1536 ;;		_esp8266_get_stationIP
+  1537 ;;		_esp8266_ip
+  1538 ;;		_esp8266_send
+  1539 ;;		_esp8266_receive
+  1540 ;;		__esp8266_waitFor
+  1541 ;; This function uses a non-reentrant model
+  1542 ;;
+  1543                           
+  1544                           
+  1545                           ;psect for function __esp8266_getch
+  1546  0404                     __esp8266_getch:	
+  1547                           
+  1548                           ;esp8266_functions.h: 139: if(OERR)
+  1549                           
+  1550                           ;incstack = 0
+  1551                           ; Regs used in __esp8266_getch: [wreg]
+  1552  0404  1283               	bcf	3,5	;RP0=0, select bank0
+  1553  0405  1303               	bcf	3,6	;RP1=0, select bank0
+  1554  0406  1C98               	btfss	24,1	;volatile
+  1555  0407  2C0A               	goto	l77
+  1556                           
+  1557                           ;esp8266_functions.h: 140: {
+  1558                           ;esp8266_functions.h: 141: CREN = 0;
+  1559  0408  1218               	bcf	24,4	;volatile
+  1560                           
+  1561                           ;esp8266_functions.h: 142: CREN = 1;
+  1562  0409  1618               	bsf	24,4	;volatile
+  1563  040A                     l77:	
+  1564                           ;esp8266_functions.h: 143: }
+  1565                           ;esp8266_functions.h: 145: while(!RCIF);
+  1566                           
+  1567  040A  1E8C               	btfss	12,5	;volatile
+  1568  040B  2C0A               	goto	l77
+  1569                           
+  1570                           ;esp8266_functions.h: 147: return RCREG;
+  1571  040C  081A               	movf	26,w	;volatile
+  1572  040D  0008               	return
+  1573  040E                     __end_of__esp8266_getch:	
+  1574                           
+  1575                           	psect	text6
+  1576  04B5                     __ptext6:	
+  1577 ;; *************** function __esp8266_print *****************
+  1578 ;; Defined at:
+  1579 ;;		line 427 in file "esp8266_functions.h"
+  1580 ;; Parameters:    Size  Location     Type
+  1581 ;;  ptr             2    1[COMMON] PTR const unsigned char 
+  1582 ;;		 -> STR_46(10), STR_45(14), STR_30(3), STR_29(12), 
+  1583 ;;		 -> esp8266_send@length_str(6), STR_27(3), esp8266_start@port_str(5), STR_25(3), 
+  1584 ;;		 -> STR_24(4), STR_23(4), STR_22(4), STR_21(14), 
+  1585 ;;		 -> STR_19(11), STR_17(11), STR_16(4), STR_15(4), 
+  1586 ;;		 -> STR_14(11), STR_13(3), STR_12(11), STR_10(3), 
+  1587 ;;		 -> STR_9(4), STR_8(9), STR_7(5), STR_3(8), 
+  1588 ;;		 -> STR_2(4), STR_1(11), 
+  1589 ;; Auto vars:     Size  Location     Type
+  1590 ;;		None
+  1591 ;; Return value:  Size  Location     Type
+  1592 ;;                  1    wreg      void 
+  1593 ;; Registers used:
+  1594 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  1595 ;; Tracked objects:
+  1596 ;;		On entry : 0/0
+  1597 ;;		On exit  : 0/0
+  1598 ;;		Unchanged: 0/0
+  1599 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1600 ;;      Params:         2       0       0       0       0
+  1601 ;;      Locals:         0       0       0       0       0
+  1602 ;;      Temps:          0       0       0       0       0
+  1603 ;;      Totals:         2       0       0       0       0
+  1604 ;;Total ram usage:        2 bytes
+  1605 ;; Hardware stack levels used:    1
+  1606 ;; Hardware stack levels required when called:    1
+  1607 ;; This function calls:
+  1608 ;;		__esp8266_putch
+  1609 ;; This function is called by:
+  1610 ;;		_esp8266_config_softAP
+  1611 ;;		_esp8266_isStarted
+  1612 ;;		_esp8266_mode
+  1613 ;;		_esp8266_restart
+  1614 ;;		_esp8266_echoCmds
+  1615 ;;		_esp8266_connect
+  1616 ;;		_esp8266_disconnect
+  1617 ;;		_esp8266_ip
+  1618 ;;		_esp8266_start
+  1619 ;;		_esp8266_send
+  1620 ;; This function uses a non-reentrant model
+  1621 ;;
+  1622                           
+  1623                           
+  1624                           ;psect for function __esp8266_print
+  1625  04B5                     __esp8266_print:	
+  1626  04B5                     l1257:	
+  1627                           ;esp8266_functions.h: 428: while (*ptr != 0) {
+  1628                           
+  1629                           ;incstack = 0
+  1630                           ; Regs used in __esp8266_print: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+  1631                           
+  1632  04B5  0872               	movf	__esp8266_print@ptr+1,w
+  1633  04B6  1283               	bcf	3,5	;RP0=0, select bank0
+  1634  04B7  1303               	bcf	3,6	;RP1=0, select bank0
+  1635  04B8  00FF               	movwf	127
+  1636  04B9  0871               	movf	__esp8266_print@ptr,w
+  1637  04BA  0084               	movwf	4
+  1638  04BB  120A  158A  2000  120A  118A  	fcall	stringtab
+  1639  04C0  3A00               	xorlw	0
+  1640  04C1  1903               	btfsc	3,2
+  1641  04C2  0008               	return
+  1642                           
+  1643                           ;esp8266_functions.h: 429: _esp8266_putch(*ptr++);
+  1644  04C3  0872               	movf	__esp8266_print@ptr+1,w
+  1645  04C4  1283               	bcf	3,5	;RP0=0, select bank0
+  1646  04C5  1303               	bcf	3,6	;RP1=0, select bank0
+  1647  04C6  00FF               	movwf	127
+  1648  04C7  0871               	movf	__esp8266_print@ptr,w
+  1649  04C8  0084               	movwf	4
+  1650  04C9  120A  158A  2000  120A  118A  	fcall	stringtab
+  1651  04CE  120A  118A  23F4  120A  118A  	fcall	__esp8266_putch
+  1652  04D3  3001               	movlw	1
+  1653  04D4  07F1               	addwf	__esp8266_print@ptr,f
+  1654  04D5  1803               	skipnc
+  1655  04D6  0AF2               	incf	__esp8266_print@ptr+1,f
+  1656  04D7  2CB5               	goto	l1257
+  1657  04D8                     __end_of__esp8266_print:	
+  1658                           
+  1659                           	psect	text7
+  1660  03F4                     __ptext7:	
+  1661 ;; *************** function __esp8266_putch *****************
+  1662 ;; Defined at:
+  1663 ;;		line 129 in file "esp8266_functions.h"
+  1664 ;; Parameters:    Size  Location     Type
+  1665 ;;  bt              1    wreg     unsigned char 
+  1666 ;; Auto vars:     Size  Location     Type
+  1667 ;;  bt              1    0[COMMON] unsigned char 
+  1668 ;; Return value:  Size  Location     Type
+  1669 ;;                  1    wreg      void 
+  1670 ;; Registers used:
+  1671 ;;		wreg
+  1672 ;; Tracked objects:
+  1673 ;;		On entry : 0/0
+  1674 ;;		On exit  : 0/0
+  1675 ;;		Unchanged: 0/0
+  1676 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1677 ;;      Params:         0       0       0       0       0
+  1678 ;;      Locals:         1       0       0       0       0
+  1679 ;;      Temps:          0       0       0       0       0
+  1680 ;;      Totals:         1       0       0       0       0
+  1681 ;;Total ram usage:        1 bytes
+  1682 ;; Hardware stack levels used:    1
+  1683 ;; This function calls:
+  1684 ;;		Nothing
+  1685 ;; This function is called by:
+  1686 ;;		_esp8266_mode
+  1687 ;;		__esp8266_print
+  1688 ;;		_ESP8266_send_string
+  1689 ;;		_esp8266_echoCmds
+  1690 ;; This function uses a non-reentrant model
+  1691 ;;
+  1692                           
+  1693                           
+  1694                           ;psect for function __esp8266_putch
+  1695  03F4                     __esp8266_putch:	
+  1696                           
+  1697                           ;incstack = 0
+  1698                           ; Regs used in __esp8266_putch: [wreg]
+  1699                           ;__esp8266_putch@bt stored from wreg
+  1700  03F4  00F0               	movwf	__esp8266_putch@bt
+  1701  03F5                     l70:	
+  1702                           ;esp8266_functions.h: 131: while(!TXIF);
+  1703                           
+  1704  03F5  1283               	bcf	3,5	;RP0=0, select bank0
+  1705  03F6  1303               	bcf	3,6	;RP1=0, select bank0
+  1706  03F7  1E0C               	btfss	12,4	;volatile
+  1707  03F8  2BF5               	goto	l70
+  1708                           
+  1709                           ;esp8266_functions.h: 132: TXREG = bt;
+  1710  03F9  0870               	movf	__esp8266_putch@bt,w
+  1711  03FA  0099               	movwf	25	;volatile
+  1712  03FB  0008               	return
+  1713  03FC                     __end_of__esp8266_putch:	
+  1714                           
+  1715                           	psect	text8
+  1716  0605                     __ptext8:	
+  1717 ;; *************** function _Lcd_Start *****************
+  1718 ;; Defined at:
+  1719 ;;		line 85 in file "ESP_PIC.c"
+  1720 ;; Parameters:    Size  Location     Type
+  1721 ;;		None
+  1722 ;; Auto vars:     Size  Location     Type
+  1723 ;;  i               2    6[COMMON] int 
+  1724 ;; Return value:  Size  Location     Type
+  1725 ;;                  1    wreg      void 
+  1726 ;; Registers used:
+  1727 ;;		wreg, status,2, status,0, btemp+1, pclath, cstack
+  1728 ;; Tracked objects:
+  1729 ;;		On entry : 0/0
+  1730 ;;		On exit  : 0/0
+  1731 ;;		Unchanged: 0/0
+  1732 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1733 ;;      Params:         0       0       0       0       0
+  1734 ;;      Locals:         2       0       0       0       0
+  1735 ;;      Temps:          2       0       0       0       0
+  1736 ;;      Totals:         4       0       0       0       0
+  1737 ;;Total ram usage:        4 bytes
+  1738 ;; Hardware stack levels used:    1
+  1739 ;; Hardware stack levels required when called:    2
+  1740 ;; This function calls:
+  1741 ;;		_Lcd_Cmd
+  1742 ;;		_Lcd_SetBit
+  1743 ;; This function is called by:
+  1744 ;;		_main
+  1745 ;; This function uses a non-reentrant model
+  1746 ;;
+  1747                           
+  1748                           
+  1749                           ;psect for function _Lcd_Start
+  1750  0605                     _Lcd_Start:	
+  1751                           
+  1752                           ;ESP_PIC.c: 87: Lcd_SetBit(0x00);
+  1753                           
+  1754                           ;incstack = 0
+  1755                           ; Regs used in _Lcd_Start: [wreg+status,2+status,0+btemp+1+pclath+cstack]
+  1756  0605  3000               	movlw	0
+  1757  0606  120A  118A  2463  120A  118A  	fcall	_Lcd_SetBit
+  1758                           
+  1759                           ;ESP_PIC.c: 88: for(int i=1065244; i<=0; i--) __nop();
+  1760  060B  301C               	movlw	28
+  1761  060C  00F6               	movwf	Lcd_Start@i
+  1762  060D  3041               	movlw	65
+  1763  060E  00F7               	movwf	Lcd_Start@i+1
+  1764  060F  0877               	movf	Lcd_Start@i+1,w
+  1765  0610  3A80               	xorlw	128
+  1766  0611  00FF               	movwf	127
+  1767  0612  3080               	movlw	128
+  1768  0613  027F               	subwf	127,w
+  1769  0614  1D03               	skipz
+  1770  0615  2E18               	goto	u815
+  1771  0616  3001               	movlw	1
+  1772  0617  0276               	subwf	Lcd_Start@i,w
+  1773  0618                     u815:	
+  1774  0618  1803               	btfsc	3,0
+  1775  0619  2E2C               	goto	l1407
+  1776  061A                     l219:	
+  1777  061A  0000               	nop
+  1778  061B  30FF               	movlw	255
+  1779  061C  07F6               	addwf	Lcd_Start@i,f
+  1780  061D  1803               	skipnc
+  1781  061E  0AF7               	incf	Lcd_Start@i+1,f
+  1782  061F  30FF               	movlw	255
+  1783  0620  07F7               	addwf	Lcd_Start@i+1,f
+  1784  0621  0877               	movf	Lcd_Start@i+1,w
+  1785  0622  3A80               	xorlw	128
+  1786  0623  00FF               	movwf	127
+  1787  0624  3080               	movlw	128
+  1788  0625  027F               	subwf	127,w
+  1789  0626  1D03               	skipz
+  1790  0627  2E2A               	goto	u825
+  1791  0628  3001               	movlw	1
+  1792  0629  0276               	subwf	Lcd_Start@i,w
+  1793  062A                     u825:	
+  1794  062A  1C03               	skipc
+  1795  062B  2E1A               	goto	l219
+  1796  062C                     l1407:	
+  1797                           
+  1798                           ;ESP_PIC.c: 89: Lcd_Cmd(0x03);
+  1799  062C  3003               	movlw	3
+  1800  062D  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1801                           
+  1802                           ;ESP_PIC.c: 90: _delay((unsigned long)((5)*(20000000/4000.0)));
+  1803  0632  3021               	movlw	33
+  1804  0633  00F5               	movwf	??_Lcd_Start+1
+  1805  0634  3076               	movlw	118
+  1806  0635  00F4               	movwf	??_Lcd_Start
+  1807  0636                     u1387:	
+  1808  0636  0BF4               	decfsz	??_Lcd_Start,f
+  1809  0637  2E36               	goto	u1387
+  1810  0638  0BF5               	decfsz	??_Lcd_Start+1,f
+  1811  0639  2E36               	goto	u1387
+  1812  063A  0000               	nop
+  1813                           
+  1814                           ;ESP_PIC.c: 91: Lcd_Cmd(0x03);
+  1815  063B  3003               	movlw	3
+  1816  063C  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1817                           
+  1818                           ;ESP_PIC.c: 92: _delay((unsigned long)((11)*(20000000/4000.0)));
+  1819  0641  3048               	movlw	72
+  1820  0642  00F5               	movwf	??_Lcd_Start+1
+  1821  0643  306C               	movlw	108
+  1822  0644  00F4               	movwf	??_Lcd_Start
+  1823  0645                     u1397:	
+  1824  0645  0BF4               	decfsz	??_Lcd_Start,f
+  1825  0646  2E45               	goto	u1397
+  1826  0647  0BF5               	decfsz	??_Lcd_Start+1,f
+  1827  0648  2E45               	goto	u1397
+  1828  0649  0000               	nop
+  1829                           
+  1830                           ;ESP_PIC.c: 93: Lcd_Cmd(0x03);
+  1831  064A  3003               	movlw	3
+  1832  064B  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1833                           
+  1834                           ;ESP_PIC.c: 94: Lcd_Cmd(0x02);
+  1835  0650  3002               	movlw	2
+  1836  0651  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1837                           
+  1838                           ;ESP_PIC.c: 95: Lcd_Cmd(0x02);
+  1839  0656  3002               	movlw	2
+  1840  0657  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1841                           
+  1842                           ;ESP_PIC.c: 96: Lcd_Cmd(0x08);
+  1843  065C  3008               	movlw	8
+  1844  065D  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1845                           
+  1846                           ;ESP_PIC.c: 97: Lcd_Cmd(0x00);
+  1847  0662  3000               	movlw	0
+  1848  0663  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1849                           
+  1850                           ;ESP_PIC.c: 98: Lcd_Cmd(0x0C);
+  1851  0668  300C               	movlw	12
+  1852  0669  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1853                           
+  1854                           ;ESP_PIC.c: 99: Lcd_Cmd(0x00);
+  1855  066E  3000               	movlw	0
+  1856  066F  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1857                           
+  1858                           ;ESP_PIC.c: 100: Lcd_Cmd(0x06);
+  1859  0674  3006               	movlw	6
+  1860  0675  120A  118A  247D   	fcall	_Lcd_Cmd
+  1861  0678  0008               	return
+  1862  0679                     __end_of_Lcd_Start:	
+  1863                           
+  1864                           	psect	text9
+  1865  054A                     __ptext9:	
+  1866 ;; *************** function _Lcd_Set_Cursor *****************
+  1867 ;; Defined at:
+  1868 ;;		line 64 in file "ESP_PIC.c"
+  1869 ;; Parameters:    Size  Location     Type
+  1870 ;;  a               1    wreg     unsigned char 
+  1871 ;;  b               1    4[COMMON] unsigned char 
+  1872 ;; Auto vars:     Size  Location     Type
+  1873 ;;  a               1    7[COMMON] unsigned char 
+  1874 ;;  temp            1   10[COMMON] unsigned char 
+  1875 ;;  y               1    9[COMMON] unsigned char 
+  1876 ;;  z               1    8[COMMON] unsigned char 
+  1877 ;; Return value:  Size  Location     Type
+  1878 ;;                  1    wreg      void 
+  1879 ;; Registers used:
+  1880 ;;		wreg, status,2, status,0, pclath, cstack
+  1881 ;; Tracked objects:
+  1882 ;;		On entry : 0/0
+  1883 ;;		On exit  : 0/0
+  1884 ;;		Unchanged: 0/0
+  1885 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1886 ;;      Params:         1       0       0       0       0
+  1887 ;;      Locals:         4       0       0       0       0
+  1888 ;;      Temps:          2       0       0       0       0
+  1889 ;;      Totals:         7       0       0       0       0
+  1890 ;;Total ram usage:        7 bytes
+  1891 ;; Hardware stack levels used:    1
+  1892 ;; Hardware stack levels required when called:    2
+  1893 ;; This function calls:
+  1894 ;;		_Lcd_Cmd
+  1895 ;; This function is called by:
+  1896 ;;		_main
+  1897 ;;		_esp8266_get_stationIP
+  1898 ;; This function uses a non-reentrant model
+  1899 ;;
+  1900                           
+  1901                           
+  1902                           ;psect for function _Lcd_Set_Cursor
+  1903  054A                     _Lcd_Set_Cursor:	
+  1904                           
+  1905                           ;incstack = 0
+  1906                           ; Regs used in _Lcd_Set_Cursor: [wreg+status,2+status,0+pclath+cstack]
+  1907                           ;Lcd_Set_Cursor@a stored from wreg
+  1908  054A  00F7               	movwf	Lcd_Set_Cursor@a
+  1909                           
+  1910                           ;ESP_PIC.c: 66: char temp,z,y;
+  1911                           ;ESP_PIC.c: 67: if(a== 1)
+  1912  054B  0377               	decf	Lcd_Set_Cursor@a,w
+  1913  054C  1D03               	btfss	3,2
+  1914  054D  2D6F               	goto	l1359
+  1915                           
+  1916                           ;ESP_PIC.c: 68: {
+  1917                           ;ESP_PIC.c: 69: temp = 0x80 + b - 1;
+  1918  054E  0874               	movf	Lcd_Set_Cursor@b,w
+  1919  054F  3E7F               	addlw	127
+  1920  0550  00F5               	movwf	??_Lcd_Set_Cursor
+  1921  0551  0875               	movf	??_Lcd_Set_Cursor,w
+  1922  0552  00FA               	movwf	Lcd_Set_Cursor@temp
+  1923                           
+  1924                           ;ESP_PIC.c: 70: z = temp>>4;
+  1925  0553  087A               	movf	Lcd_Set_Cursor@temp,w
+  1926  0554  00F5               	movwf	??_Lcd_Set_Cursor
+  1927  0555  3004               	movlw	4
+  1928  0556                     u745:	
+  1929  0556  1003               	clrc
+  1930  0557  0CF5               	rrf	??_Lcd_Set_Cursor,f
+  1931  0558  3EFF               	addlw	-1
+  1932  0559  1D03               	skipz
+  1933  055A  2D56               	goto	u745
+  1934  055B  0875               	movf	??_Lcd_Set_Cursor,w
+  1935  055C  00F6               	movwf	??_Lcd_Set_Cursor+1
+  1936  055D  0876               	movf	??_Lcd_Set_Cursor+1,w
+  1937  055E  00F8               	movwf	Lcd_Set_Cursor@z
+  1938                           
+  1939                           ;ESP_PIC.c: 71: y = temp & 0x0F;
+  1940  055F  087A               	movf	Lcd_Set_Cursor@temp,w
+  1941  0560  390F               	andlw	15
+  1942  0561  00F5               	movwf	??_Lcd_Set_Cursor
+  1943  0562  0875               	movf	??_Lcd_Set_Cursor,w
+  1944  0563  00F9               	movwf	Lcd_Set_Cursor@y
+  1945                           
+  1946                           ;ESP_PIC.c: 72: Lcd_Cmd(z);
+  1947  0564  0878               	movf	Lcd_Set_Cursor@z,w
+  1948  0565  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1949                           
+  1950                           ;ESP_PIC.c: 73: Lcd_Cmd(y);
+  1951  056A  0879               	movf	Lcd_Set_Cursor@y,w
+  1952  056B  120A  118A  247D   	fcall	_Lcd_Cmd
+  1953                           
+  1954                           ;ESP_PIC.c: 74: }
+  1955  056E  0008               	return
+  1956  056F                     l1359:	
+  1957                           
+  1958                           ;ESP_PIC.c: 75: else if(a== 2)
+  1959  056F  3002               	movlw	2
+  1960  0570  0677               	xorwf	Lcd_Set_Cursor@a,w
+  1961  0571  1D03               	btfss	3,2
+  1962  0572  0008               	return
+  1963                           
+  1964                           ;ESP_PIC.c: 76: {
+  1965                           ;ESP_PIC.c: 77: temp = 0xC0 + b - 1;
+  1966  0573  0874               	movf	Lcd_Set_Cursor@b,w
+  1967  0574  3EBF               	addlw	191
+  1968  0575  00F5               	movwf	??_Lcd_Set_Cursor
+  1969  0576  0875               	movf	??_Lcd_Set_Cursor,w
+  1970  0577  00FA               	movwf	Lcd_Set_Cursor@temp
+  1971                           
+  1972                           ;ESP_PIC.c: 78: z = temp>>4;
+  1973  0578  087A               	movf	Lcd_Set_Cursor@temp,w
+  1974  0579  00F5               	movwf	??_Lcd_Set_Cursor
+  1975  057A  3004               	movlw	4
+  1976  057B                     u765:	
+  1977  057B  1003               	clrc
+  1978  057C  0CF5               	rrf	??_Lcd_Set_Cursor,f
+  1979  057D  3EFF               	addlw	-1
+  1980  057E  1D03               	skipz
+  1981  057F  2D7B               	goto	u765
+  1982  0580  0875               	movf	??_Lcd_Set_Cursor,w
+  1983  0581  00F6               	movwf	??_Lcd_Set_Cursor+1
+  1984  0582  0876               	movf	??_Lcd_Set_Cursor+1,w
+  1985  0583  00F8               	movwf	Lcd_Set_Cursor@z
+  1986                           
+  1987                           ;ESP_PIC.c: 79: y = temp & 0x0F;
+  1988  0584  087A               	movf	Lcd_Set_Cursor@temp,w
+  1989  0585  390F               	andlw	15
+  1990  0586  00F5               	movwf	??_Lcd_Set_Cursor
+  1991  0587  0875               	movf	??_Lcd_Set_Cursor,w
+  1992  0588  00F9               	movwf	Lcd_Set_Cursor@y
+  1993                           
+  1994                           ;ESP_PIC.c: 80: Lcd_Cmd(z);
+  1995  0589  0878               	movf	Lcd_Set_Cursor@z,w
+  1996  058A  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  1997                           
+  1998                           ;ESP_PIC.c: 81: Lcd_Cmd(y);
+  1999  058F  0879               	movf	Lcd_Set_Cursor@y,w
+  2000  0590  120A  118A  247D   	fcall	_Lcd_Cmd
+  2001  0593  0008               	return
+  2002  0594                     __end_of_Lcd_Set_Cursor:	
+  2003                           
+  2004                           	psect	text10
+  2005  0509                     __ptext10:	
+  2006 ;; *************** function _Lcd_Print_String *****************
+  2007 ;; Defined at:
+  2008 ;;		line 119 in file "ESP_PIC.c"
+  2009 ;; Parameters:    Size  Location     Type
+  2010 ;;  a               2    9[COMMON] PTR unsigned char 
+  2011 ;;		 -> STR_47(14), STR_44(14), STR_43(17), STR_42(14), 
+  2012 ;;		 -> STR_41(17), STR_40(15), STR_6(5), STR_5(4), 
+  2013 ;; Auto vars:     Size  Location     Type
+  2014 ;;  i               2    0[BANK0 ] int 
+  2015 ;; Return value:  Size  Location     Type
+  2016 ;;                  1    wreg      void 
+  2017 ;; Registers used:
+  2018 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  2019 ;; Tracked objects:
+  2020 ;;		On entry : 0/0
+  2021 ;;		On exit  : 0/0
+  2022 ;;		Unchanged: 0/0
+  2023 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2024 ;;      Params:         2       0       0       0       0
+  2025 ;;      Locals:         0       2       0       0       0
+  2026 ;;      Temps:          3       0       0       0       0
+  2027 ;;      Totals:         5       2       0       0       0
+  2028 ;;Total ram usage:        7 bytes
+  2029 ;; Hardware stack levels used:    1
+  2030 ;; Hardware stack levels required when called:    2
+  2031 ;; This function calls:
+  2032 ;;		_Lcd_Print_Char
+  2033 ;; This function is called by:
+  2034 ;;		_main
+  2035 ;;		_esp8266_get_stationIP
+  2036 ;; This function uses a non-reentrant model
+  2037 ;;
+  2038                           
+  2039                           
+  2040                           ;psect for function _Lcd_Print_String
+  2041  0509                     _Lcd_Print_String:	
+  2042                           
+  2043                           ;ESP_PIC.c: 121: int i;
+  2044                           ;ESP_PIC.c: 122: for(i=0;a[i]!='\0';i++)
+  2045                           
+  2046                           ;incstack = 0
+  2047                           ; Regs used in _Lcd_Print_String: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+  2048  0509  1283               	bcf	3,5	;RP0=0, select bank0
+  2049  050A  1303               	bcf	3,6	;RP1=0, select bank0
+  2050  050B  01A0               	clrf	Lcd_Print_String@i
+  2051  050C  01A1               	clrf	Lcd_Print_String@i+1
+  2052  050D                     l1375:	
+  2053  050D  0820               	movf	Lcd_Print_String@i,w
+  2054  050E  0779               	addwf	Lcd_Print_String@a,w
+  2055  050F  00FC               	movwf	??_Lcd_Print_String+1
+  2056  0510  087A               	movf	Lcd_Print_String@a+1,w
+  2057  0511  00FB               	movwf	??_Lcd_Print_String
+  2058  0512  1803               	skipnc
+  2059  0513  0AFB               	incf	??_Lcd_Print_String,f
+  2060  0514  1BA0               	btfsc	Lcd_Print_String@i,7
+  2061  0515  03FB               	decf	??_Lcd_Print_String,f
+  2062  0516  087B               	movf	??_Lcd_Print_String,w
+  2063  0517  00FD               	movwf	??_Lcd_Print_String+2
+  2064  0518  087D               	movf	??_Lcd_Print_String+2,w
+  2065  0519  1283               	bcf	3,5	;RP0=0, select bank0
+  2066  051A  1303               	bcf	3,6	;RP1=0, select bank0
+  2067  051B  00FF               	movwf	127
+  2068  051C  087C               	movf	??_Lcd_Print_String+1,w
+  2069  051D  0084               	movwf	4
+  2070  051E  120A  158A  2000  120A  118A  	fcall	stringtab
+  2071  0523  3A00               	xorlw	0
+  2072  0524  1903               	btfsc	3,2
+  2073  0525  0008               	return
+  2074                           
+  2075                           ;ESP_PIC.c: 123: Lcd_Print_Char(a[i]);
+  2076  0526  0820               	movf	Lcd_Print_String@i,w
+  2077  0527  0779               	addwf	Lcd_Print_String@a,w
+  2078  0528  00FC               	movwf	??_Lcd_Print_String+1
+  2079  0529  087A               	movf	Lcd_Print_String@a+1,w
+  2080  052A  00FB               	movwf	??_Lcd_Print_String
+  2081  052B  1803               	skipnc
+  2082  052C  0AFB               	incf	??_Lcd_Print_String,f
+  2083  052D  1BA0               	btfsc	Lcd_Print_String@i,7
+  2084  052E  03FB               	decf	??_Lcd_Print_String,f
+  2085  052F  087B               	movf	??_Lcd_Print_String,w
+  2086  0530  00FD               	movwf	??_Lcd_Print_String+2
+  2087  0531  087D               	movf	??_Lcd_Print_String+2,w
+  2088  0532  1283               	bcf	3,5	;RP0=0, select bank0
+  2089  0533  1303               	bcf	3,6	;RP1=0, select bank0
+  2090  0534  00FF               	movwf	127
+  2091  0535  087C               	movf	??_Lcd_Print_String+1,w
+  2092  0536  0084               	movwf	4
+  2093  0537  120A  158A  2000  120A  118A  	fcall	stringtab
+  2094  053C  120A  118A  2594  120A  118A  	fcall	_Lcd_Print_Char
+  2095  0541  3001               	movlw	1
+  2096  0542  1283               	bcf	3,5	;RP0=0, select bank0
+  2097  0543  1303               	bcf	3,6	;RP1=0, select bank0
+  2098  0544  07A0               	addwf	Lcd_Print_String@i,f
+  2099  0545  1803               	skipnc
+  2100  0546  0AA1               	incf	Lcd_Print_String@i+1,f
+  2101  0547  3000               	movlw	0
+  2102  0548  07A1               	addwf	Lcd_Print_String@i+1,f
+  2103  0549  2D0D               	goto	l1375
+  2104  054A                     __end_of_Lcd_Print_String:	
+  2105                           
+  2106                           	psect	text11
+  2107  0594                     __ptext11:	
+  2108 ;; *************** function _Lcd_Print_Char *****************
+  2109 ;; Defined at:
+  2110 ;;		line 103 in file "ESP_PIC.c"
+  2111 ;; Parameters:    Size  Location     Type
+  2112 ;;  data            1    wreg     unsigned char 
+  2113 ;; Auto vars:     Size  Location     Type
+  2114 ;;  data            1    4[COMMON] unsigned char 
+  2115 ;;  i               2    7[COMMON] int 
+  2116 ;;  i               2    5[COMMON] int 
+  2117 ;;  Upper_Nibble    1    3[COMMON] unsigned char 
+  2118 ;;  Lower_Nibble    1    2[COMMON] unsigned char 
+  2119 ;; Return value:  Size  Location     Type
+  2120 ;;                  1    wreg      void 
+  2121 ;; Registers used:
+  2122 ;;		wreg, status,2, status,0, btemp+1, pclath, cstack
+  2123 ;; Tracked objects:
+  2124 ;;		On entry : 0/0
+  2125 ;;		On exit  : 0/0
+  2126 ;;		Unchanged: 0/0
+  2127 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2128 ;;      Params:         0       0       0       0       0
+  2129 ;;      Locals:         7       0       0       0       0
+  2130 ;;      Temps:          1       0       0       0       0
+  2131 ;;      Totals:         8       0       0       0       0
+  2132 ;;Total ram usage:        8 bytes
+  2133 ;; Hardware stack levels used:    1
+  2134 ;; Hardware stack levels required when called:    1
+  2135 ;; This function calls:
+  2136 ;;		_Lcd_SetBit
+  2137 ;; This function is called by:
+  2138 ;;		_Lcd_Print_String
+  2139 ;;		_esp8266_get_stationIP
+  2140 ;; This function uses a non-reentrant model
+  2141 ;;
+  2142                           
+  2143                           
+  2144                           ;psect for function _Lcd_Print_Char
+  2145  0594                     _Lcd_Print_Char:	
+  2146                           
+  2147                           ;incstack = 0
+  2148                           ; Regs used in _Lcd_Print_Char: [wreg+status,2+status,0+btemp+1+pclath+cstack]
+  2149                           ;Lcd_Print_Char@data stored from wreg
+  2150  0594  00F4               	movwf	Lcd_Print_Char@data
+  2151                           
+  2152                           ;ESP_PIC.c: 105: char Lower_Nibble,Upper_Nibble;
+  2153                           ;ESP_PIC.c: 106: Lower_Nibble = data&0x0F;
+  2154  0595  0874               	movf	Lcd_Print_Char@data,w
+  2155  0596  390F               	andlw	15
+  2156  0597  00F1               	movwf	??_Lcd_Print_Char
+  2157  0598  0871               	movf	??_Lcd_Print_Char,w
+  2158  0599  00F2               	movwf	Lcd_Print_Char@Lower_Nibble
+  2159                           
+  2160                           ;ESP_PIC.c: 107: Upper_Nibble = data&0xF0;
+  2161  059A  0874               	movf	Lcd_Print_Char@data,w
+  2162  059B  39F0               	andlw	240
+  2163  059C  00F1               	movwf	??_Lcd_Print_Char
+  2164  059D  0871               	movf	??_Lcd_Print_Char,w
+  2165  059E  00F3               	movwf	Lcd_Print_Char@Upper_Nibble
+  2166                           
+  2167                           ;ESP_PIC.c: 108: RD2 = 1;
+  2168  059F  1283               	bcf	3,5	;RP0=0, select bank0
+  2169  05A0  1303               	bcf	3,6	;RP1=0, select bank0
+  2170  05A1  1508               	bsf	8,2	;volatile
+  2171                           
+  2172                           ;ESP_PIC.c: 109: Lcd_SetBit(Upper_Nibble>>4);
+  2173  05A2  0873               	movf	Lcd_Print_Char@Upper_Nibble,w
+  2174  05A3  00F1               	movwf	??_Lcd_Print_Char
+  2175  05A4  3004               	movlw	4
+  2176  05A5                     u675:	
+  2177  05A5  1003               	clrc
+  2178  05A6  0CF1               	rrf	??_Lcd_Print_Char,f
+  2179  05A7  3EFF               	addlw	-1
+  2180  05A8  1D03               	skipz
+  2181  05A9  2DA5               	goto	u675
+  2182  05AA  0871               	movf	??_Lcd_Print_Char,w
+  2183  05AB  120A  118A  2463  120A  118A  	fcall	_Lcd_SetBit
+  2184                           
+  2185                           ;ESP_PIC.c: 110: RD3 = 1;
+  2186  05B0  1283               	bcf	3,5	;RP0=0, select bank0
+  2187  05B1  1303               	bcf	3,6	;RP1=0, select bank0
+  2188  05B2  1588               	bsf	8,3	;volatile
+  2189                           
+  2190                           ;ESP_PIC.c: 111: for(int i=2130483; i<=0; i--) __nop();
+  2191  05B3  3033               	movlw	51
+  2192  05B4  00F5               	movwf	Lcd_Print_Char@i
+  2193  05B5  3082               	movlw	130
+  2194  05B6  00F6               	movwf	Lcd_Print_Char@i+1
+  2195  05B7  0876               	movf	Lcd_Print_Char@i+1,w
+  2196  05B8  3A80               	xorlw	128
+  2197  05B9  00FF               	movwf	127
+  2198  05BA  3080               	movlw	128
+  2199  05BB  027F               	subwf	127,w
+  2200  05BC  1D03               	skipz
+  2201  05BD  2DC0               	goto	u685
+  2202  05BE  3001               	movlw	1
+  2203  05BF  0275               	subwf	Lcd_Print_Char@i,w
+  2204  05C0                     u685:	
+  2205  05C0  1803               	btfsc	3,0
+  2206  05C1  2DD4               	goto	l225
+  2207  05C2                     l224:	
+  2208  05C2  0000               	nop
+  2209  05C3  30FF               	movlw	255
+  2210  05C4  07F5               	addwf	Lcd_Print_Char@i,f
+  2211  05C5  1803               	skipnc
+  2212  05C6  0AF6               	incf	Lcd_Print_Char@i+1,f
+  2213  05C7  30FF               	movlw	255
+  2214  05C8  07F6               	addwf	Lcd_Print_Char@i+1,f
+  2215  05C9  0876               	movf	Lcd_Print_Char@i+1,w
+  2216  05CA  3A80               	xorlw	128
+  2217  05CB  00FF               	movwf	127
+  2218  05CC  3080               	movlw	128
+  2219  05CD  027F               	subwf	127,w
+  2220  05CE  1D03               	skipz
+  2221  05CF  2DD2               	goto	u695
+  2222  05D0  3001               	movlw	1
+  2223  05D1  0275               	subwf	Lcd_Print_Char@i,w
+  2224  05D2                     u695:	
+  2225  05D2  1C03               	skipc
+  2226  05D3  2DC2               	goto	l224
+  2227  05D4                     l225:	
+  2228                           
+  2229                           ;ESP_PIC.c: 112: RD3 = 0;
+  2230  05D4  1283               	bcf	3,5	;RP0=0, select bank0
+  2231  05D5  1303               	bcf	3,6	;RP1=0, select bank0
+  2232  05D6  1188               	bcf	8,3	;volatile
+  2233                           
+  2234                           ;ESP_PIC.c: 113: Lcd_SetBit(Lower_Nibble);
+  2235  05D7  0872               	movf	Lcd_Print_Char@Lower_Nibble,w
+  2236  05D8  120A  118A  2463  120A  118A  	fcall	_Lcd_SetBit
+  2237                           
+  2238                           ;ESP_PIC.c: 114: RD3 = 1;
+  2239  05DD  1283               	bcf	3,5	;RP0=0, select bank0
+  2240  05DE  1303               	bcf	3,6	;RP1=0, select bank0
+  2241  05DF  1588               	bsf	8,3	;volatile
+  2242                           
+  2243                           ;ESP_PIC.c: 115: for(int i=2130483; i<=0; i--) __nop();
+  2244  05E0  3033               	movlw	51
+  2245  05E1  00F7               	movwf	Lcd_Print_Char@i_216
+  2246  05E2  3082               	movlw	130
+  2247  05E3  00F8               	movwf	Lcd_Print_Char@i_216+1
+  2248  05E4  0878               	movf	Lcd_Print_Char@i_216+1,w
+  2249  05E5  3A80               	xorlw	128
+  2250  05E6  00FF               	movwf	127
+  2251  05E7  3080               	movlw	128
+  2252  05E8  027F               	subwf	127,w
+  2253  05E9  1D03               	skipz
+  2254  05EA  2DED               	goto	u705
+  2255  05EB  3001               	movlw	1
+  2256  05EC  0277               	subwf	Lcd_Print_Char@i_216,w
+  2257  05ED                     u705:	
+  2258  05ED  1803               	btfsc	3,0
+  2259  05EE  2E01               	goto	l227
+  2260  05EF                     l226:	
+  2261  05EF  0000               	nop
+  2262  05F0  30FF               	movlw	255
+  2263  05F1  07F7               	addwf	Lcd_Print_Char@i_216,f
+  2264  05F2  1803               	skipnc
+  2265  05F3  0AF8               	incf	Lcd_Print_Char@i_216+1,f
+  2266  05F4  30FF               	movlw	255
+  2267  05F5  07F8               	addwf	Lcd_Print_Char@i_216+1,f
+  2268  05F6  0878               	movf	Lcd_Print_Char@i_216+1,w
+  2269  05F7  3A80               	xorlw	128
+  2270  05F8  00FF               	movwf	127
+  2271  05F9  3080               	movlw	128
+  2272  05FA  027F               	subwf	127,w
+  2273  05FB  1D03               	skipz
+  2274  05FC  2DFF               	goto	u715
+  2275  05FD  3001               	movlw	1
+  2276  05FE  0277               	subwf	Lcd_Print_Char@i_216,w
+  2277  05FF                     u715:	
+  2278  05FF  1C03               	skipc
+  2279  0600  2DEF               	goto	l226
+  2280  0601                     l227:	
+  2281                           
+  2282                           ;ESP_PIC.c: 116: RD3 = 0;
+  2283  0601  1283               	bcf	3,5	;RP0=0, select bank0
+  2284  0602  1303               	bcf	3,6	;RP1=0, select bank0
+  2285  0603  1188               	bcf	8,3	;volatile
+  2286  0604  0008               	return
+  2287  0605                     __end_of_Lcd_Print_Char:	
+  2288                           
+  2289                           	psect	text12
+  2290  040E                     __ptext12:	
+  2291 ;; *************** function _Lcd_Clear *****************
+  2292 ;; Defined at:
+  2293 ;;		line 58 in file "ESP_PIC.c"
+  2294 ;; Parameters:    Size  Location     Type
+  2295 ;;		None
+  2296 ;; Auto vars:     Size  Location     Type
+  2297 ;;		None
+  2298 ;; Return value:  Size  Location     Type
+  2299 ;;                  2  209[None  ] int 
+  2300 ;; Registers used:
+  2301 ;;		wreg, status,2, status,0, pclath, cstack
+  2302 ;; Tracked objects:
+  2303 ;;		On entry : 0/0
+  2304 ;;		On exit  : 0/0
+  2305 ;;		Unchanged: 0/0
+  2306 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2307 ;;      Params:         0       0       0       0       0
+  2308 ;;      Locals:         0       0       0       0       0
+  2309 ;;      Temps:          0       0       0       0       0
+  2310 ;;      Totals:         0       0       0       0       0
+  2311 ;;Total ram usage:        0 bytes
+  2312 ;; Hardware stack levels used:    1
+  2313 ;; Hardware stack levels required when called:    2
+  2314 ;; This function calls:
+  2315 ;;		_Lcd_Cmd
+  2316 ;; This function is called by:
+  2317 ;;		_main
+  2318 ;; This function uses a non-reentrant model
+  2319 ;;
+  2320                           
+  2321                           
+  2322                           ;psect for function _Lcd_Clear
+  2323  040E                     _Lcd_Clear:	
+  2324                           
+  2325                           ;ESP_PIC.c: 60: Lcd_Cmd(0);
+  2326                           
+  2327                           ;incstack = 0
+  2328                           ; Regs used in _Lcd_Clear: [wreg+status,2+status,0+pclath+cstack]
+  2329  040E  3000               	movlw	0
+  2330  040F  120A  118A  247D  120A  118A  	fcall	_Lcd_Cmd
+  2331                           
+  2332                           ;ESP_PIC.c: 61: Lcd_Cmd(1);
+  2333  0414  3001               	movlw	1
+  2334  0415  120A  118A  247D   	fcall	_Lcd_Cmd
+  2335  0418  0008               	return
+  2336  0419                     __end_of_Lcd_Clear:	
+  2337                           
+  2338                           	psect	text13
+  2339  047D                     __ptext13:	
+  2340 ;; *************** function _Lcd_Cmd *****************
+  2341 ;; Defined at:
+  2342 ;;		line 49 in file "ESP_PIC.c"
+  2343 ;; Parameters:    Size  Location     Type
+  2344 ;;  a               1    wreg     unsigned char 
+  2345 ;; Auto vars:     Size  Location     Type
+  2346 ;;  a               1    3[COMMON] unsigned char 
+  2347 ;; Return value:  Size  Location     Type
+  2348 ;;                  1    wreg      void 
+  2349 ;; Registers used:
+  2350 ;;		wreg, status,2, status,0, pclath, cstack
+  2351 ;; Tracked objects:
+  2352 ;;		On entry : 0/0
+  2353 ;;		On exit  : 0/0
+  2354 ;;		Unchanged: 0/0
+  2355 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2356 ;;      Params:         0       0       0       0       0
+  2357 ;;      Locals:         1       0       0       0       0
+  2358 ;;      Temps:          2       0       0       0       0
+  2359 ;;      Totals:         3       0       0       0       0
+  2360 ;;Total ram usage:        3 bytes
+  2361 ;; Hardware stack levels used:    1
+  2362 ;; Hardware stack levels required when called:    1
+  2363 ;; This function calls:
+  2364 ;;		_Lcd_SetBit
+  2365 ;; This function is called by:
+  2366 ;;		_Lcd_Clear
+  2367 ;;		_Lcd_Set_Cursor
+  2368 ;;		_Lcd_Start
+  2369 ;; This function uses a non-reentrant model
+  2370 ;;
+  2371                           
+  2372                           
+  2373                           ;psect for function _Lcd_Cmd
+  2374  047D                     _Lcd_Cmd:	
+  2375                           
+  2376                           ;incstack = 0
+  2377                           ; Regs used in _Lcd_Cmd: [wreg+status,2+status,0+pclath+cstack]
+  2378                           ;Lcd_Cmd@a stored from wreg
+  2379  047D  00F3               	movwf	Lcd_Cmd@a
+  2380                           
+  2381                           ;ESP_PIC.c: 51: RD2 = 0;
+  2382  047E  1283               	bcf	3,5	;RP0=0, select bank0
+  2383  047F  1303               	bcf	3,6	;RP1=0, select bank0
+  2384  0480  1108               	bcf	8,2	;volatile
+  2385                           
+  2386                           ;ESP_PIC.c: 52: Lcd_SetBit(a);
+  2387  0481  0873               	movf	Lcd_Cmd@a,w
+  2388  0482  120A  118A  2463  120A  118A  	fcall	_Lcd_SetBit
+  2389                           
+  2390                           ;ESP_PIC.c: 53: RD3 = 1;
+  2391  0487  1283               	bcf	3,5	;RP0=0, select bank0
+  2392  0488  1303               	bcf	3,6	;RP1=0, select bank0
+  2393  0489  1588               	bsf	8,3	;volatile
+  2394                           
+  2395                           ;ESP_PIC.c: 54: _delay((unsigned long)((4)*(20000000/4000.0)));
+  2396  048A  301A               	movlw	26
+  2397  048B  00F2               	movwf	??_Lcd_Cmd+1
+  2398  048C  30F8               	movlw	248
+  2399  048D  00F1               	movwf	??_Lcd_Cmd
+  2400  048E                     u1407:	
+  2401  048E  0BF1               	decfsz	??_Lcd_Cmd,f
+  2402  048F  2C8E               	goto	u1407
+  2403  0490  0BF2               	decfsz	??_Lcd_Cmd+1,f
+  2404  0491  2C8E               	goto	u1407
+  2405  0492  0000               	nop
+  2406                           
+  2407                           ;ESP_PIC.c: 55: RD3 = 0;
+  2408  0493  1283               	bcf	3,5	;RP0=0, select bank0
+  2409  0494  1303               	bcf	3,6	;RP1=0, select bank0
+  2410  0495  1188               	bcf	8,3	;volatile
+  2411  0496  0008               	return
+  2412  0497                     __end_of_Lcd_Cmd:	
+  2413                           
+  2414                           	psect	text14
+  2415  0463                     __ptext14:	
+  2416 ;; *************** function _Lcd_SetBit *****************
+  2417 ;; Defined at:
+  2418 ;;		line 26 in file "ESP_PIC.c"
+  2419 ;; Parameters:    Size  Location     Type
+  2420 ;;  data_bit        1    wreg     unsigned char 
+  2421 ;; Auto vars:     Size  Location     Type
+  2422 ;;  data_bit        1    0[COMMON] unsigned char 
+  2423 ;; Return value:  Size  Location     Type
+  2424 ;;                  1    wreg      void 
+  2425 ;; Registers used:
+  2426 ;;		wreg
+  2427 ;; Tracked objects:
+  2428 ;;		On entry : 0/0
+  2429 ;;		On exit  : 0/0
+  2430 ;;		Unchanged: 0/0
+  2431 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2432 ;;      Params:         0       0       0       0       0
+  2433 ;;      Locals:         1       0       0       0       0
+  2434 ;;      Temps:          0       0       0       0       0
+  2435 ;;      Totals:         1       0       0       0       0
+  2436 ;;Total ram usage:        1 bytes
+  2437 ;; Hardware stack levels used:    1
+  2438 ;; This function calls:
+  2439 ;;		Nothing
+  2440 ;; This function is called by:
+  2441 ;;		_Lcd_Cmd
+  2442 ;;		_Lcd_Start
+  2443 ;;		_Lcd_Print_Char
+  2444 ;; This function uses a non-reentrant model
+  2445 ;;
+  2446                           
+  2447                           
+  2448                           ;psect for function _Lcd_SetBit
+  2449  0463                     _Lcd_SetBit:	
+  2450                           
+  2451                           ;incstack = 0
+  2452                           ; Regs used in _Lcd_SetBit: [wreg]
+  2453                           ;Lcd_SetBit@data_bit stored from wreg
+  2454  0463  00F0               	movwf	Lcd_SetBit@data_bit
+  2455                           
+  2456                           ;ESP_PIC.c: 28: if(data_bit& 1)
+  2457  0464  1C70               	btfss	Lcd_SetBit@data_bit,0
+  2458  0465  2C6A               	goto	l196
+  2459                           
+  2460                           ;ESP_PIC.c: 29: RD4 = 1;
+  2461  0466  1283               	bcf	3,5	;RP0=0, select bank0
+  2462  0467  1303               	bcf	3,6	;RP1=0, select bank0
+  2463  0468  1608               	bsf	8,4	;volatile
+  2464  0469  2C6D               	goto	l197
+  2465  046A                     l196:	
+  2466                           
+  2467                           ;ESP_PIC.c: 30: else
+  2468                           ;ESP_PIC.c: 31: RD4 = 0;
+  2469  046A  1283               	bcf	3,5	;RP0=0, select bank0
+  2470  046B  1303               	bcf	3,6	;RP1=0, select bank0
+  2471  046C  1208               	bcf	8,4	;volatile
+  2472  046D                     l197:	
+  2473                           
+  2474                           ;ESP_PIC.c: 33: if(data_bit& 2)
+  2475  046D  1CF0               	btfss	Lcd_SetBit@data_bit,1
+  2476  046E  2C71               	goto	l198
+  2477                           
+  2478                           ;ESP_PIC.c: 34: RD5 = 1;
+  2479  046F  1688               	bsf	8,5	;volatile
+  2480  0470  2C72               	goto	l199
+  2481  0471                     l198:	
+  2482                           
+  2483                           ;ESP_PIC.c: 35: else
+  2484                           ;ESP_PIC.c: 36: RD5 = 0;
+  2485  0471  1288               	bcf	8,5	;volatile
+  2486  0472                     l199:	
+  2487                           
+  2488                           ;ESP_PIC.c: 38: if(data_bit& 4)
+  2489  0472  1D70               	btfss	Lcd_SetBit@data_bit,2
+  2490  0473  2C76               	goto	l200
+  2491                           
+  2492                           ;ESP_PIC.c: 39: RD6 = 1;
+  2493  0474  1708               	bsf	8,6	;volatile
+  2494  0475  2C77               	goto	l201
+  2495  0476                     l200:	
+  2496                           
+  2497                           ;ESP_PIC.c: 40: else
+  2498                           ;ESP_PIC.c: 41: RD6 = 0;
+  2499  0476  1308               	bcf	8,6	;volatile
+  2500  0477                     l201:	
+  2501                           
+  2502                           ;ESP_PIC.c: 43: if(data_bit& 8)
+  2503  0477  1DF0               	btfss	Lcd_SetBit@data_bit,3
+  2504  0478  2C7B               	goto	l202
+  2505                           
+  2506                           ;ESP_PIC.c: 44: RD7 = 1;
+  2507  0479  1788               	bsf	8,7	;volatile
+  2508  047A  0008               	return
+  2509  047B                     l202:	
+  2510                           
+  2511                           ;ESP_PIC.c: 45: else
+  2512                           ;ESP_PIC.c: 46: RD7 = 0;
+  2513  047B  1388               	bcf	8,7	;volatile
+  2514  047C  0008               	return
+  2515  047D                     __end_of_Lcd_SetBit:	
+  2516                           
+  2517                           	psect	text15
+  2518  044B                     __ptext15:	
+  2519 ;; *************** function _Initialize_ESP8266 *****************
+  2520 ;; Defined at:
+  2521 ;;		line 99 in file "esp8266_functions.h"
+  2522 ;; Parameters:    Size  Location     Type
+  2523 ;;		None
+  2524 ;; Auto vars:     Size  Location     Type
+  2525 ;;		None
+  2526 ;; Return value:  Size  Location     Type
+  2527 ;;                  1    wreg      void 
+  2528 ;; Registers used:
+  2529 ;;		wreg
+  2530 ;; Tracked objects:
+  2531 ;;		On entry : 0/0
+  2532 ;;		On exit  : 0/0
+  2533 ;;		Unchanged: 0/0
+  2534 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  2535 ;;      Params:         0       0       0       0       0
+  2536 ;;      Locals:         0       0       0       0       0
+  2537 ;;      Temps:          0       0       0       0       0
+  2538 ;;      Totals:         0       0       0       0       0
+  2539 ;;Total ram usage:        0 bytes
+  2540 ;; Hardware stack levels used:    1
+  2541 ;; This function calls:
+  2542 ;;		Nothing
+  2543 ;; This function is called by:
+  2544 ;;		_main
+  2545 ;; This function uses a non-reentrant model
+  2546 ;;
+  2547                           
+  2548                           
+  2549                           ;psect for function _Initialize_ESP8266
+  2550  044B                     _Initialize_ESP8266:	
+  2551                           
+  2552                           ;esp8266_functions.h: 102: TRISC6 = 0;
+  2553                           
+  2554                           ;incstack = 0
+  2555                           ; Regs used in _Initialize_ESP8266: [wreg]
+  2556  044B  1683               	bsf	3,5	;RP0=1, select bank1
+  2557  044C  1303               	bcf	3,6	;RP1=0, select bank1
+  2558  044D  1307               	bcf	7,6	;volatile
+  2559                           
+  2560                           ;esp8266_functions.h: 103: TRISC7 = 1;
+  2561  044E  1787               	bsf	7,7	;volatile
+  2562                           
+  2563                           ;esp8266_functions.h: 108: SPBRG = 10;
+  2564  044F  300A               	movlw	10
+  2565  0450  0099               	movwf	25	;volatile
+  2566                           
+  2567                           ;esp8266_functions.h: 109: BRGH = 1;
+  2568  0451  1518               	bsf	24,2	;volatile
+  2569                           
+  2570                           ;esp8266_functions.h: 113: SYNC = 0;
+  2571  0452  1218               	bcf	24,4	;volatile
+  2572                           
+  2573                           ;esp8266_functions.h: 114: SPEN = 1;
+  2574  0453  1283               	bcf	3,5	;RP0=0, select bank0
+  2575  0454  1303               	bcf	3,6	;RP1=0, select bank0
+  2576  0455  1798               	bsf	24,7	;volatile
+  2577                           
+  2578                           ;esp8266_functions.h: 117: TXEN = 1;
+  2579  0456  1683               	bsf	3,5	;RP0=1, select bank1
+  2580  0457  1303               	bcf	3,6	;RP1=0, select bank1
+  2581  0458  1698               	bsf	24,5	;volatile
+  2582                           
+  2583                           ;esp8266_functions.h: 118: CREN = 1;
+  2584  0459  1283               	bcf	3,5	;RP0=0, select bank0
+  2585  045A  1303               	bcf	3,6	;RP1=0, select bank0
+  2586  045B  1618               	bsf	24,4	;volatile
+  2587                           
+  2588                           ;esp8266_functions.h: 122: TX9 = 0;
+  2589  045C  1683               	bsf	3,5	;RP0=1, select bank1
+  2590  045D  1303               	bcf	3,6	;RP1=0, select bank1
+  2591  045E  1318               	bcf	24,6	;volatile
+  2592                           
+  2593                           ;esp8266_functions.h: 123: RX9 = 0;
+  2594  045F  1283               	bcf	3,5	;RP0=0, select bank0
+  2595  0460  1303               	bcf	3,6	;RP1=0, select bank0
+  2596  0461  1318               	bcf	24,6	;volatile
+  2597  0462  0008               	return
+  2598  0463                     __end_of_Initialize_ESP8266:	
+  2599  007E                     btemp	set	126	;btemp
+  2600  007E                     wtemp	set	126
+  2601  007E                     wtemp0	set	126
+  2602  0080                     wtemp1	set	128
+  2603  0082                     wtemp2	set	130
+  2604  0084                     wtemp3	set	132
+  2605  0086                     wtemp4	set	134
+  2606  0088                     wtemp5	set	136
+  2607  007F                     wtemp6	set	127
+  2608  007E                     ttemp	set	126
+  2609  007E                     ttemp0	set	126
+  2610  0081                     ttemp1	set	129
+  2611  0084                     ttemp2	set	132
+  2612  0087                     ttemp3	set	135
+  2613  007F                     ttemp4	set	127
+  2614  007E                     ltemp	set	126
+  2615  007E                     ltemp0	set	126
+  2616  0082                     ltemp1	set	130
+  2617  0086                     ltemp2	set	134
+  2618  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     313
+    Constant    22
+    Data        12
+    BSS         17
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     14      14
+    BANK0            80     25      54
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    Lcd_Print_String@a	PTR unsigned char  size(2) Largest target is 17
+		 -> STR_47(CODE[14]), STR_44(CODE[14]), STR_43(CODE[17]), STR_42(CODE[14]), 
+		 -> STR_41(CODE[17]), STR_40(CODE[15]), STR_6(CODE[5]), STR_5(CODE[4]), 
+
+    _esp8266_waitResponse@strings	PTR const unsigned char [6] size(2) Largest target is 10
+		 -> STR_39(CODE[7]), STR_38(CODE[7]), STR_37(CODE[10]), STR_36(CODE[5]), 
+		 -> STR_35(CODE[6]), STR_34(CODE[3]), 
+
+    _esp8266_waitResponse@F1360	PTR const unsigned char [6] size(2) Largest target is 10
+		 -> STR_39(CODE[7]), STR_38(CODE[7]), STR_37(CODE[10]), STR_36(CODE[5]), 
+		 -> STR_35(CODE[6]), STR_34(CODE[3]), 
+
+    _esp8266_print@ptr	PTR const unsigned char  size(2) Largest target is 14
+		 -> STR_46(CODE[10]), STR_45(CODE[14]), STR_30(CODE[3]), STR_29(CODE[12]), 
+		 -> esp8266_send@length_str(COMMON[6]), STR_27(CODE[3]), esp8266_start@port_str(COMMON[5]), STR_25(CODE[3]), 
+		 -> STR_24(CODE[4]), STR_23(CODE[4]), STR_22(CODE[4]), STR_21(CODE[14]), 
+		 -> STR_19(CODE[11]), STR_17(CODE[11]), STR_16(CODE[4]), STR_15(CODE[4]), 
+		 -> STR_14(CODE[11]), STR_13(CODE[3]), STR_12(CODE[11]), STR_10(CODE[3]), 
+		 -> STR_9(CODE[4]), STR_8(CODE[9]), STR_7(CODE[5]), STR_3(CODE[8]), 
+		 -> STR_2(CODE[4]), STR_1(CODE[11]), 
+
+    esp8266_config_softAP@softpass	PTR unsigned char  size(2) Largest target is 10
+		 -> STR_46(CODE[10]), 
+
+    esp8266_config_softAP@softssid	PTR unsigned char  size(2) Largest target is 14
+		 -> STR_45(CODE[14]), 
+
+
+Critical Paths under _main in COMMON
+
+    _main->_Lcd_Print_String
+    _esp8266_mode->__esp8266_waitResponse
+    _esp8266_isStarted->__esp8266_waitResponse
+    _esp8266_config_softAP->__esp8266_waitResponse
+    __esp8266_print->__esp8266_putch
+    _Lcd_Start->_Lcd_Cmd
+    _Lcd_Set_Cursor->_Lcd_Cmd
+    _Lcd_Print_String->_Lcd_Print_Char
+    _Lcd_Print_Char->_Lcd_SetBit
+    _Lcd_Clear->_Lcd_Cmd
+    _Lcd_Cmd->_Lcd_SetBit
+
+Critical Paths under _main in BANK0
+
+    _esp8266_mode->__esp8266_waitResponse
+    _esp8266_isStarted->__esp8266_waitResponse
+    _esp8266_config_softAP->__esp8266_waitResponse
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 3     3      0    8274
+                                             22 BANK0      3     3      0
+                 _Initialize_ESP8266
+                          _Lcd_Clear
+                   _Lcd_Print_String
+                     _Lcd_Set_Cursor
+                          _Lcd_Start
+              _esp8266_config_softAP
+                  _esp8266_isStarted
+                       _esp8266_mode
+ ---------------------------------------------------------------------------------
+ (1) _esp8266_mode                                         1     1      0    2090
+                                              4 COMMON     1     1      0
+                     __esp8266_print
+                     __esp8266_putch
+              __esp8266_waitResponse
+ ---------------------------------------------------------------------------------
+ (1) _esp8266_isStarted                                    0     0      0    2046
+                     __esp8266_print
+              __esp8266_waitResponse
+ ---------------------------------------------------------------------------------
+ (1) _esp8266_config_softAP                                4     0      4    2196
+                                              4 COMMON     4     0      4
+                     __esp8266_print
+              __esp8266_waitResponse
+ ---------------------------------------------------------------------------------
+ (2) __esp8266_waitResponse                               26    26      0     389
+                                              0 COMMON     4     4      0
+                                              0 BANK0     22    22      0
+                     __esp8266_getch
+ ---------------------------------------------------------------------------------
+ (3) __esp8266_getch                                       0     0      0       0
+ ---------------------------------------------------------------------------------
+ (2) __esp8266_print                                       2     0      2    1657
+                                              1 COMMON     2     0      2
+                     __esp8266_putch
+ ---------------------------------------------------------------------------------
+ (2) __esp8266_putch                                       1     1      0      22
+                                              0 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _Lcd_Start                                            4     4      0     244
+                                              4 COMMON     4     4      0
+                            _Lcd_Cmd
+                         _Lcd_SetBit
+ ---------------------------------------------------------------------------------
+ (1) _Lcd_Set_Cursor                                       7     6      1     804
+                                              4 COMMON     7     6      1
+                            _Lcd_Cmd
+ ---------------------------------------------------------------------------------
+ (1) _Lcd_Print_String                                     7     5      2     784
+                                              9 COMMON     5     3      2
+                                              0 BANK0      2     2      0
+                     _Lcd_Print_Char
+ ---------------------------------------------------------------------------------
+ (2) _Lcd_Print_Char                                       8     8      0     270
+                                              1 COMMON     8     8      0
+                         _Lcd_SetBit
+ ---------------------------------------------------------------------------------
+ (1) _Lcd_Clear                                            0     0      0     110
+                            _Lcd_Cmd
+ ---------------------------------------------------------------------------------
+ (2) _Lcd_Cmd                                              3     3      0     110
+                                              1 COMMON     3     3      0
+                         _Lcd_SetBit
+ ---------------------------------------------------------------------------------
+ (2) _Lcd_SetBit                                           1     1      0      88
+                                              0 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ (1) _Initialize_ESP8266                                   0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _Initialize_ESP8266
+   _Lcd_Clear
+     _Lcd_Cmd
+       _Lcd_SetBit
+   _Lcd_Print_String
+     _Lcd_Print_Char
+       _Lcd_SetBit
+   _Lcd_Set_Cursor
+     _Lcd_Cmd
+       _Lcd_SetBit
+   _Lcd_Start
+     _Lcd_Cmd
+       _Lcd_SetBit
+     _Lcd_SetBit
+   _esp8266_config_softAP
+     __esp8266_print
+       __esp8266_putch
+     __esp8266_waitResponse
+       __esp8266_getch
+   _esp8266_isStarted
+     __esp8266_print
+       __esp8266_putch
+     __esp8266_waitResponse
+       __esp8266_getch
+   _esp8266_mode
+     __esp8266_print
+       __esp8266_putch
+     __esp8266_putch
+     __esp8266_waitResponse
+       __esp8266_getch
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BANK3               60      0       0       9        0.0%
+BITBANK3            60      0       0       8        0.0%
+SFR3                 0      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+BANK2               60      0       0      11        0.0%
+BITBANK2            60      0       0      10        0.0%
+SFR2                 0      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK1            50      0       0       6        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50     19      36       5       67.5%
+BITBANK0            50      0       0       4        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      E       E       1      100.0%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      44      12        0.0%
+ABS                  0      0      44       3        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA             100      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.38 build -256452561 
+Symbol Table                                                                                   Sun Apr 30 11:45:29 2017
+
+                                      pc 0002                              __CFG_CP$OFF 0000  
+                                     l70 03F5                                       l77 040A  
+                                     fsr 0004                       __esp8266_print@ptr 0071  
+                     esp8266_start@F1338 0045                                      l200 0476  
+                                    l201 0477                                      l202 047B  
+                                    l224 05C2                                      l225 05D4  
+                                    l226 05EF                                      l227 0601  
+                                    l219 061A                                      l239 07E7  
+                                    l196 046A                                      l197 046D  
+                                    l198 0471                                      l199 0472  
+                                    _RD2 0042                                      _RD3 0043  
+                                    _RD4 0044                                      _RD5 0045  
+                                    _RD6 0046                                      _RD7 0047  
+                                    u610 0697                             __CFG_CPD$OFF 0000  
+                                    u705 05ED                                      u715 05FF  
+                                    u815 0618                                      u745 0556  
+                                    u825 062A                                      u675 05A5  
+                                    u685 05C0                                      u765 057B  
+                                    u695 05D2                                      _RX9 00C6  
+                                    _TX9 04C6                                      fsr0 0004  
+                                    indf 0000                             __CFG_FOSC$HS 0000  
+                           __CFG_LVP$OFF 0000                                     l1407 062C  
+                                   l1257 04B5                                     l1291 070D  
+                                   l1283 0703                                     l1285 0708  
+                                   l1381 0449                                     l1375 050D  
+                                   l1359 056F                                     l1289 06A6  
+                                   l1679 0752                                     STR_1 08D7  
+                                   STR_2 0944                                     STR_3 090A  
+                                   STR_4 08AB                                     STR_5 0948  
+                                   STR_6 0936                                     STR_7 0931  
+                                   STR_8 0901                                     STR_9 094C  
+                                   _BRGH 04C2                                     _CREN 00C4  
+                                   u1407 048E                                     u1347 0746  
+                                   u1357 0783                                     u1367 07AE  
+                                   u1377 07E0                                     u1387 0636  
+                                   u1397 0645                                     _RCIF 0065  
+                                   _OERR 00C1                                     _SPEN 00C7  
+                                   _TXEN 04C5                                     _TXIF 0064  
+                                   _SYNC 04C4                             __CFG_WRT$OFF 0000  
+                                   _main 070F                                     btemp 007E  
+             __end_of_Initialize_ESP8266 0463                            __CFG_BOREN$ON 0000  
+                                   ltemp 007E                                     start 0000  
+                                   ttemp 007E                                     wtemp 007E  
+                     Lcd_Print_Char@data 0074                          __end_of_Lcd_Cmd 0497  
+                             _Lcd_SetBit 0463                                    ?_main 0070  
+                                  STR_11 095B                                    STR_12 08E2  
+                                  STR_13 092E                                    STR_21 0859  
+                                  STR_22 0950                                    STR_14 08CC  
+                                  STR_23 0954                                    STR_31 0920  
+                                  STR_16 0940                                    STR_32 092C  
+                                  STR_40 084A                                    STR_25 0958  
+                                  STR_17 08B6                                    STR_41 0828  
+                          __CFG_WDTE$OFF 0000                                    STR_26 095E  
+                                  STR_42 0883                                    STR_34 095B  
+                                  STR_19 08C1                                    STR_43 0839  
+                                  STR_35 0926                                    STR_44 0867  
+                                  STR_36 093B                                    STR_29 089F  
+                                  STR_45 0891                                    STR_37 08F7  
+                                  STR_46 08ED                                    STR_38 0912  
+                                  STR_47 0875                                    STR_39 0919  
+                                  _RCREG 001A                                    _SPBRG 0099  
+                __size_of_Lcd_Set_Cursor 004A                                    _TRISD 0088  
+                                  _TXREG 0019                    __esp8266_waitResponse 0679  
+                        __end_of_dpowers 081C                                    pclath 000A  
+                                  ltemp0 007E                                    ltemp1 0082  
+                                  ltemp2 0086                                    ltemp3 0080  
+              __size_of_Lcd_Print_String 0041                                    ttemp0 007E  
+                                  ttemp1 0081                                    ttemp2 0084  
+                                  ttemp3 0087                                    ttemp4 007F  
+                    Lcd_Print_Char@i_216 0077                                    status 0003  
+                                  wtemp0 007E                                    wtemp1 0080  
+                                  wtemp2 0082                                    wtemp3 0084  
+                                  wtemp4 0086                                    wtemp5 0088  
+                                  wtemp6 007F                  __size_of_Lcd_Print_Char 0071  
+                        __initialization 07E8                             __end_of_main 07E8  
+                                 ??_main 0036                       __size_of_Lcd_Clear 000B  
+         __size_of_esp8266_config_softAP 0031            __end_of_esp8266_config_softAP 0509  
+                     __size_of_Lcd_Start 0074                    __size_of_esp8266_mode 001E  
+                              ??_Lcd_Cmd 0071                           __esp8266_getch 0404  
+                                 _TRISC6 043E                                   _TRISC7 043F  
+                         __esp8266_print 04B5                           __esp8266_putch 03F4  
+                         __CFG_PWRTE$OFF 0000                              ?_Lcd_SetBit 0070  
+                 ?__esp8266_waitResponse 0070                             _esp8266_mode 0497  
+                        Lcd_Set_Cursor@a 0077                          Lcd_Set_Cursor@b 0074  
+                        Lcd_Set_Cursor@y 0079                          Lcd_Set_Cursor@z 0078  
+                 __end_of__esp8266_getch 040E                   __end_of__esp8266_print 04D8  
+                 __end_of__esp8266_putch 03FC                  __end_of__initialization 07FC  
+                      __end_of_Lcd_Clear 0419            esp8266_config_softAP@softpass 0076  
+          esp8266_config_softAP@softssid 0074                        __end_of_Lcd_Start 0679  
+    __esp8266_waitResponse@continue_loop 0034                           __pcstackCOMMON 0070  
+                           __pidataBANK0 0419                           _Lcd_Set_Cursor 054A  
+                      _esp8266_isStarted 0436                       ?_esp8266_isStarted 0070  
+                        ?__esp8266_getch 0070                               __pbssBANK0 0039  
+                        ?__esp8266_print 0071                          ?__esp8266_putch 0070  
+__end_of__esp8266_waitResponse@responses 0828          __esp8266_waitResponse@responses 0822  
+                       _Lcd_Print_String 0509                      __size_of_Lcd_SetBit 001A  
+                    ??_esp8266_isStarted 0074    __end_of__esp8266_waitResponse@lengths 0822  
+          __esp8266_waitResponse@lengths 081C                           _Lcd_Print_Char 0594  
+                             __pmaintext 070F            __esp8266_waitResponse@strings 0020  
+                     Lcd_SetBit@data_bit 0070                       _Initialize_ESP8266 044B  
+                 __end_of_Lcd_Set_Cursor 0594                __end_of_esp8266_isStarted 044B  
+                    ?_Initialize_ESP8266 0070                               __stringtab 0800  
+                        Lcd_Print_Char@i 0075                                  _Lcd_Cmd 047D  
+                 __end_of_Lcd_Print_Char 0605                  __esp8266_waitResponse@i 0035  
+                   ??_Initialize_ESP8266 0070                          ?_Lcd_Set_Cursor 0074  
+                                __ptext1 0497                                  __ptext2 0436  
+                                __ptext3 04D8                                  __ptext4 0679  
+                                __ptext5 0404                                  __ptext6 04B5  
+                                __ptext7 03F4                                  __ptext8 0605  
+                                __ptext9 054A                                  _dpowers 0812  
+                                clrloop0 03FD                     end_of_initialization 07FC  
+                        ?_Lcd_Print_Char 0070                         esp8266_mode@mode 0074  
+                           __pstringtext 0800                             ??_Lcd_SetBit 0070  
+                ??__esp8266_waitResponse 0070               __size_of_esp8266_isStarted 0015  
+                  _esp8266_config_softAP 04D8                        __esp8266_putch@bt 0070  
+                     __end_of_Lcd_SetBit 047D                                _Lcd_Clear 040E  
+                              _Lcd_Start 0605                 __end_of_Lcd_Print_String 054A  
+                    start_initialization 07E8                         ??__esp8266_getch 0070  
+                       ??__esp8266_print 0073                         ??__esp8266_putch 0070  
+                      Lcd_Print_String@a 0079                        Lcd_Print_String@i 0020  
+                             ?_Lcd_Clear 0070                               init_fetch0 0425  
+                             ?_Lcd_Start 0070                              __pdataBANK0 004A  
+             Lcd_Print_Char@Lower_Nibble 0072                                ___latbits 0002  
+                 ?_esp8266_config_softAP 0074                            __pcstackBANK0 0020  
+         __esp8266_waitResponse@received 0032                                 ?_Lcd_Cmd 0070  
+         __esp8266_waitResponse@response 0033             __esp8266_waitResponse@so_far 002C  
+                       ??_Lcd_Set_Cursor 0075                         ??_Lcd_Print_Char 0071  
+                              clear_ram0 03FC                                 Lcd_Cmd@a 0073  
+            __size_of_Initialize_ESP8266 0018                              ??_Lcd_Clear 0074  
+                            ??_Lcd_Start 0074                              __stringbase 0812  
+         __size_of__esp8266_waitResponse 0096            __end_of__esp8266_waitResponse 070F  
+                          ?_esp8266_mode 0070                         __size_of_Lcd_Cmd 001A  
+            __esp8266_waitResponse@F1360 004A              __esp8266_waitResponse@F1357 0039  
+                     __end_of__stringtab 0812                        ?_Lcd_Print_String 0079  
+                         ??_esp8266_mode 0074                       ??_Lcd_Print_String 007B  
+                               __ptext10 0509                                 __ptext11 0594  
+                               __ptext12 040E                                 __ptext13 047D  
+                               __ptext14 0463                                 __ptext15 044B  
+                          __size_of_main 00D9               Lcd_Print_Char@Upper_Nibble 0073  
+                ??_esp8266_config_softAP 0078                                 init_ram0 0429  
+                              stringcode 080A                        esp8266_send@F1341 003F  
+                     Lcd_Set_Cursor@temp 007A                               Lcd_Start@i 0076  
+                               stringtab 0800                  __size_of__esp8266_getch 000A  
+                __size_of__esp8266_print 0023                  __size_of__esp8266_putch 0008  
+                   __end_of_esp8266_mode 04B5  
